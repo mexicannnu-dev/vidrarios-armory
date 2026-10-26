@@ -5,13 +5,14 @@ test('intro loads the video and enters the app when playback ends', async ({page
     const video = page.locator('.intro-screen video');
     await expect(video).toBeVisible();
     await expect.poll(() => video.evaluate(element => element.readyState)).toBeGreaterThanOrEqual(2);
-    expect(await video.evaluate(element => element.muted)).toBe(false);
-    await expect(page.getByRole('button', {name: 'Oprește sunetul'})).toBeVisible();
     await expect.poll(async () => (await video.evaluate(element => !element.paused)) || await page.getByRole('button', {name: 'Pornește videoclipul'}).isVisible()).toBe(true);
     if (await page.getByRole('button', {name: 'Pornește videoclipul'}).isVisible()) {
         await page.getByRole('button', {name: 'Pornește videoclipul'}).click();
     }
     await expect.poll(() => video.evaluate(element => element.currentTime)).toBeGreaterThan(0);
+    if (await page.getByRole('button', {name: 'Activează sunetul'}).isVisible()) {
+        await page.getByRole('button', {name: 'Activează sunetul'}).click();
+    }
     expect(await video.evaluate(element => element.muted)).toBe(false);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.screenshot({path: test.info().outputPath('intro.png')});

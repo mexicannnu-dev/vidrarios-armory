@@ -10,7 +10,19 @@ export default function Intro({onFinish}) {
         try {
             await video.current.play();
             setBlocked(false);
-        } catch { setBlocked(true); }
+        } catch {
+            // Browsers may allow autoplay only when the video is muted.
+            if (video.current && !video.current.muted) {
+                video.current.muted = true;
+                setMuted(true);
+                try {
+                    await video.current.play();
+                    setBlocked(false);
+                    return;
+                } catch { /* Keep a manual start available if all autoplay is blocked. */ }
+            }
+            setBlocked(true);
+        }
     }
 
     return <main className="intro-screen">
