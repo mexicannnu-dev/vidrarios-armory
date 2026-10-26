@@ -1,5 +1,6 @@
 import {test, expect} from '@playwright/test';
 async function finishIntro(page) {
+    await page.getByRole('button', {name: /GO TO ARMORY/}).click();
     const video = page.locator('.intro-screen video');
     await expect.poll(() => video.evaluate(element => element.readyState)).toBeGreaterThanOrEqual(2);
     await video.dispatchEvent('ended');
@@ -9,15 +10,20 @@ async function finishIntro(page) {
 test('intro loads the video and enters the app when playback ends', async ({page}) => {
     await page.goto('/');
     const video = page.locator('.intro-screen video');
+    await expect(video).toBeHidden();
+    await expect(page.getByRole('heading', {name: 'LINIȘTEA DE DINAINTEA FURTUNII.'})).toBeVisible();
+    await page.locator('.intro-welcome').evaluate(element => Promise.all(element.getAnimations({subtree: true}).filter(animation => animation.effect.getTiming().iterations !== Infinity).map(animation => animation.finished)));
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.screenshot({path: test.info().outputPath('welcome.png')});
+    await page.getByRole('button', {name: /GO TO ARMORY/}).click();
     await expect(video).toBeVisible();
     await expect.poll(() => video.evaluate(element => element.readyState)).toBeGreaterThanOrEqual(2);
-    await expect.poll(async () => (await video.evaluate(element => !element.paused)) || await page.getByRole('button', {name: 'Pornește videoclipul'}).isVisible()).toBe(true);
-    if (await page.getByRole('button', {name: 'Pornește videoclipul'}).isVisible()) {
-        await page.getByRole('button', {name: 'Pornește videoclipul'}).click();
-    }
+    await expect.poll(() => video.evaluate(element => element.paused)).toBe(false);
     await expect.poll(() => video.evaluate(element => element.currentTime)).toBeGreaterThan(0);
 
+    await expect(page.locator('.intro-screen button')).toHaveCount(0);
     expect(await video.evaluate(element => element.muted)).toBe(false);
+    await expect(page.getByText('La finalul videoclipului vei intra automat în armory.')).toHaveCount(0);
     expect(await video.evaluate(element => element.controls)).toBe(false);
     await expect(page.locator('.intro-actions')).toHaveCount(0);
     await video.evaluate(element => element.pause());
