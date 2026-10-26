@@ -784,7 +784,7 @@ export default {
         },
         {
             "id": "att-4",
-            "name": "Amortizor CERAMIC PISTOL",
+            "name": "Amortizor Ceramic Pistol",
             "group": "Tip amortizor",
             "materials": {
                 "Oțel": 2,
@@ -810,7 +810,7 @@ export default {
         },
         {
             "id": "att-6",
-            "name": "Amortizor MICRO SMG",
+            "name": "Amortizor Micro SMG",
             "group": "Tip amortizor",
             "materials": {
                 "Oțel": 3,
@@ -1164,7 +1164,7 @@ export default {
         },
         {
             "id": "att-33",
-            "name": "Incarcator CERAMIC PISTOL",
+            "name": "Incarcator Ceramic Pistol",
             "group": "Încărcător",
             "materials": {
                 "Oțel": 1,
@@ -1178,7 +1178,7 @@ export default {
         },
         {
             "id": "att-34",
-            "name": "Incarcator MICRO SMG",
+            "name": "Incarcator Micro SMG",
             "group": "Încărcător",
             "materials": {
                 "Oțel": 2,
@@ -1433,7 +1433,7 @@ export default {
         },
         {
             "id": "att-52",
-            "name": "Lanterna MICRO SMG",
+            "name": "Lanterna Micro SMG",
             "group": "Lanternă",
             "materials": {
                 "Oțel": 1,
@@ -1536,7 +1536,7 @@ export default {
         },
         {
             "id": "att-59",
-            "name": "Luneta MICRO SMG",
+            "name": "Luneta Micro SMG",
             "group": "Lunetă",
             "materials": {
                 "Oțel": 2,
