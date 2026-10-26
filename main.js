@@ -6,7 +6,8 @@ const MATERIAL_ICONS = {
     "Polimer": "assets/materials/polimer.webp",
     "Praf de Pusca": "assets/materials/praf-de-pusca.webp",
     "Suruburi": "assets/materials/suruburi.webp",
-    "Teava Metalica": "assets/materials/teava-metalica.webp"
+    "Teava Metalica": "assets/materials/teava-metalica.webp",
+    "Bucata de Lemn": "assets/materials/BucataDeLemn.webp"
 };
 const {weapons, ammo, attachments, issues} = CATALOG;
 const $ = s => document.querySelector(s), fmt = n => n.toLocaleString('ro-RO'),
