@@ -1205,3 +1205,40 @@ header nav .active {
     text-align: inherit;
     vertical-align: baseline
 }
+
+/* Money washing calculators */
+.washing-page { width: 100%; max-width: 1060px; min-height: calc(100vh - 200px); padding-top: 42px; padding-bottom: 48px; }
+.washing-intro { margin-bottom: 32px; text-align: center; }
+.washing-intro .eyebrow { color: var(--orange); font-size: 10px; letter-spacing: 2px; }
+.washing-intro h1 { font: 700 clamp(32px, 4vw, 52px) 'Barlow Condensed', sans-serif; margin: 14px 0; }
+.washing-intro > p:last-child { color: #aaa; line-height: 1.7; }
+.washing-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 28px; border-top: 1px solid var(--line); }
+.washing-option { min-width: 0; padding: 26px 26px 0 0; }
+.washing-option + .washing-option { border-left: 1px solid var(--line); padding: 26px 0 0 26px; }
+.washing-option h2 { font-size: 24px; }
+.washing-calculator { background: #19191b; border: 1px solid var(--line); border-radius: 7px; padding: 26px; min-width: 0; }
+.washing-calculator .section-head { flex-wrap: wrap; }
+.washing-rate { color: var(--orange); background: #ff7a1a18; border-radius: 4px; padding: 7px 10px; font-size: 11px; }
+.washing-calculator label { display: block; color: #ccc; font-size: 12px; margin-bottom: 10px; }
+.washing-calculator input { width: 100%; background: #101011; color: #fff; border: 1px solid #39393b; border-radius: 5px; padding: 15px; font-size: 20px; }
+.washing-calculator input[aria-invalid="true"] { border-color: #f18c80; }
+.washing-help { color: #999; font-size: 11px; line-height: 1.6; }
+.washing-error { color: #f18c80; font-size: 12px; line-height: 1.6; }
+
+.washing-loss, .washing-net { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.washing-loss { color: #aaa; font-size: 12px; }
+.washing-net { flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 26px; color: var(--orange); }
+.washing-option .washing-loss { margin-top: 22px; padding-top: 18px; border-top: 1px dashed #3b3b3d; }
+.washing-net output { font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; overflow-wrap: anywhere; }
+@media (max-width: 1000px) {
+    header { height: auto; min-height: 100px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
+    header nav { flex-wrap: wrap; gap: 12px 24px; }
+    header nav a, header nav a.active { display: block; max-width: none; font-size: 11px; line-height: 1.5; }
+}
+@media (max-width: 680px) {
+    .washing-comparison { grid-template-columns: 1fr; }
+    .washing-option { padding: 24px 0; }
+    .washing-option + .washing-option { border-left: 0; border-top: 1px solid var(--line); padding: 24px 0 0; }
+    .washing-page { padding-top: 26px; }
+    .washing-calculator { padding: 20px; }
+}
