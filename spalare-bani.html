@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Calculator spălare bani | Vidrarios Armory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="spalare-bani.js" defer></script>
+</head>
+<body>
+<header>
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Logo Vidrarios"><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>
+    <nav aria-label="Navigare principală">
+        <a href="index.html#catalog"><b>CALCULATOR MATERIALE ARME</b></a>
+        <a class="active" href="spalare-bani.html" aria-current="page"><b>CALCULATOR SPĂLARE BANI</b></a>
+    </nav>
+</header>
+<main class="washing-page">
+    <div class="washing-intro">
+        <p class="eyebrow">VIDRARIOS / CALCULATOARE</p>
+        <h1>CALCULATOR <em>SPĂLARE BANI</em></h1>
+        <p>Introdu suma de bani murdari pentru a vedea cât pierzi și câți bani curați primești.</p>
+    </div>
+    <section class="washing-calculator" aria-labelledby="washing-title">
+        <div class="section-head"><h2 id="washing-title">Compară variantele de spălare</h2></div>
+        <label for="washing-amount">Sumă bani murdari ($)</label>
+        <input id="washing-amount" type="number" min="0" max="1000000000000" step="0.01" placeholder="Ex: 100000" inputmode="decimal" aria-describedby="washing-help washing-error">
+        <p id="washing-help" class="washing-help">Introdu suma o singură dată. Ambele variante se calculează automat.</p>
+        <p id="washing-error" class="washing-error" hidden>Introdu o sumă între 0 și 1.000.000.000.000, cu maximum 2 zecimale.</p>
+        <div class="washing-comparison" role="status" aria-live="polite" aria-atomic="true">
+            <section class="washing-option" data-loss="5" aria-labelledby="cayo-title">
+                <div class="section-head"><h2 id="cayo-title">Bani spălați Cayo</h2><span class="washing-rate">Pierdere 5%</span></div>
+                <div class="washing-net"><span>Bani curați primiți</span><output data-clean for="washing-amount">0 $</output></div>
+                <p class="washing-help">Primești 95% din suma introdusă.</p>
+                <div class="washing-loss"><span>Bani pierduți (5%)</span><output data-lost for="washing-amount">0 $</output></div>
+            </section>
+            <section class="washing-option" data-loss="35" aria-labelledby="chinez-title">
+                <div class="section-head"><h2 id="chinez-title">Bani spălați Chinez</h2><span class="washing-rate">Pierdere 35%</span></div>
+                <div class="washing-net"><span>Bani curați primiți</span><output data-clean for="washing-amount">0 $</output></div>
+                <p class="washing-help">Primești 65% din suma introdusă.</p>
+                <div class="washing-loss"><span>Bani pierduți (35%)</span><output data-lost for="washing-amount">0 $</output></div>
+            </section>
+        </div>
+    </section>
+    <noscript><p>Activează JavaScript pentru a utiliza calculatorul.</p></noscript>
+</main>
+<footer><b>VIDRARIOS ARMORY</b><span>Planifică. Configurează. Fii pregătit.</span><span>© 2026 Vidrarios Armory · Made by MeXicaNu</span></footer>
+</body>
+</html>
