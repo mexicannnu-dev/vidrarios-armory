@@ -6,7 +6,10 @@ import WashingCalculator from './components/WashingCalculator.jsx';
 import Intro from './components/Intro.jsx';
 
 export default function App() {
-    const [intro, setIntro] = useState(true);
+    const [intro, setIntro] = useState(() => {
+        try { return sessionStorage.getItem('vidrarios-intro-seen') !== '1'; }
+        catch { return true; }
+    });
     const [view, setView] = useState('armory');
     const [cart, setCart] = useState(() => {
         try { return loadCart(localStorage); } catch { return []; }
@@ -24,6 +27,10 @@ export default function App() {
         catch { setStorageError(true); }
     }, [cart]);
     useEffect(() => () => clearTimeout(toastTimer.current), []);
+    useEffect(() => {
+        try { sessionStorage.setItem('vidrarios-intro-seen', '1'); }
+        catch { /* The app remains usable when browser storage is unavailable. */ }
+    }, []);
     useEffect(() => {
         document.title = view === 'washing' ? 'Calculator spălare bani | Vidrarios Armory' : 'Vidrarios Armory';
     }, [view]);
