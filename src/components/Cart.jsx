@@ -23,7 +23,10 @@ export default function Cart({cart, onRemove, onClear}) {
         <div className="totals"><p className="eyebrow">NECESAR PENTRU COMANDĂ</p><h4>TOTAL MATERIALE & BANI</h4>
             {Object.entries(total.materials).map(([name, qty]) => <div className="total-row" key={name}><span className="material-label">{icons[name] ? <img className="material-icon" src={`assets/materials/${icons[name]}`} alt="" width="38" height="38" /> : <span className="material-fallback" aria-hidden="true">◇</span>}<span>{name}</span></span><b>{fmt(qty)}</b></div>)}
             {!Object.keys(total.materials).length && <div className="total-row"><span>Niciun material necesar</span><b>—</b></div>}
-            <div className="money-options"><p>Alternative de plată pentru armă (nu intră și atașamentele).</p><div className="money-total"><span>Total $ curați</span><b>{fmt(total.money)}</b></div><div className="money-total dirty-total"><span>Total $ murdari <small>+15%</small></span><b>{fmt(dirtyPrice(total.money))}</b></div></div>
+            <div className="money-options"><p>Alternative de plată pentru arme și taxa comenzii de gloanțe (fără atașamente).</p>
+                {total.ammoFee > 0 && <p>Taxă comandă gloanțe inclusă: {fmt(total.ammoFee)} $ curați / {fmt(dirtyPrice(total.ammoFee))} $ murdari.</p>}
+                <div className="money-total"><span>Total $ curați</span><b>{fmt(total.money)}</b></div><div className="money-total dirty-total"><span>Total $ murdari <small>+15%</small></span><b>{fmt(dirtyPrice(total.money))}</b></div></div>
+            <p className="quantity-help">De la 500 de gloanțe introduse în total, se adaugă o singură taxă de 5.000 $ curați (5.750 $ murdari). Poți calcula orice cantitate, inclusiv sub 500.</p>
             <p className="quantity-help">Prețurile armelor se adună separat. Muniția se produce în loturi de 10, rotunjite în sus.</p>
             <small>Configurația se salvează în acest browser.</small>
         </div>

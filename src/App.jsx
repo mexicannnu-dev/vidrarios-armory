@@ -53,7 +53,7 @@ export default function App() {
         </header>
         <main>
             <div id="armory-view" data-page-view="armory" hidden={view !== 'armory'}>
-                <p></p><div className="notice"><span aria-hidden="true">◈</span><div><b>Minimum 500 de gloanțe per tip de armă pentru comandă</b><p>Calculatorul permite în continuare calculul materialelor în loturi de câte 10 gloanțe.</p></div><span className="tag">MUNIȚIE</span></div>
+                <p></p><div className="notice"><span aria-hidden="true">◈</span><div><b>Minimum 500 de gloanțe per tip de armă pentru comandă (Necesita 5000$ / 500 gloanțe)</b><p>Calculatorul permite în continuare calculul materialelor în loturi de câte 10 gloanțe.</p></div><span className="tag">MUNIȚIE</span></div>
                 <div className="layout"><section id="catalog">
                     <div className="section-head"><h2>ARMORY <span>{list.length}</span></h2><label className="search">⌕ <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Caută o armă…" aria-label="Caută o armă" /></label></div>
                     <div className="arsenal-tabs" aria-label="Tip arsenal">{[{id: 'craft', name: 'Civili'}, {id: 'neo', name: 'Neo & Oficiale'}].map(({id, name}) => <button key={id} className={arsenal === id ? 'selected' : ''} aria-pressed={arsenal === id} onClick={() => {setArsenal(id); setCategory('Toate'); setSearch('');}}>{name}<span>{weapons.filter(w => id === 'neo' ? w.price > 0 : w.price === 0).length}</span></button>)}</div>

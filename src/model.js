@@ -40,7 +40,9 @@ export function totals(cart) {
         add(ammoFor(w).materials, ammoBatches(item));
         for (const a of item.attachments) add(attachmentById(a.id).materials, a.qty);
     }
-    return {materials, money};
+    const bullets = cart.reduce((sum, item) => sum + item.bullets, 0);
+    const ammoFee = bullets >= 500 ? 5000 : 0;
+    return {materials, money: money + ammoFee, ammoFee};
 }
 
 export function ammoNote(item) {
