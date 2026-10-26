@@ -1,4 +1,4 @@
-const CATALOG = {
+export default {
     "weapons": [
         {
             "id": "pistol",
