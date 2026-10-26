@@ -47,7 +47,7 @@ export default function WeaponCard({weapon: w, draft, added, onChange, onAdd}) {
             <div className="quantity-row"><span>▰ &nbsp; Gloanțe</span><Stepper value={draft.bullets} increment={10} label="Număr gloanțe" onChange={bullets => update({bullets})} /></div>
             <p className="ammo-note">{a.batch} gloanțe = {recipe(a.materials)}<br /><span>{validQty(draft.bullets) ? ammoNote(draft) : 'Introdu un număr valid de gloanțe.'}</span></p>
             <p className="quantity-help">Cantitățile atașamentelor și gloanțelor sunt totale pentru această poziție.</p>
-            <button className="primary" type="submit">{added ? '✓ În coș · actualizare automată' : '＋ Adaugă în calculator'}</button>
+            <button className="primary" type="submit">{added ? '✓ Adaugat în calculator · actualizare automată' : '＋ Adaugă în calculator'}</button>
         </form>
     </article>;
 }
