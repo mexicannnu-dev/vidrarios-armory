@@ -1395,7 +1395,7 @@ export default {
                 "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 54,
             "weapon": "pistol",
@@ -1410,7 +1410,7 @@ export default {
                 "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 55,
             "weapon": "combatpistol",
@@ -1425,7 +1425,7 @@ export default {
                 "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 56,
             "weapon": "pistolmk2",
@@ -1440,7 +1440,7 @@ export default {
                 "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 57,
             "weapon": "microsmg",
@@ -1455,7 +1455,7 @@ export default {
                 "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 58,
             "weapon": "smg",
@@ -1470,7 +1470,7 @@ export default {
                 "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 59,
             "weapon": "assaultrifle",
@@ -1485,7 +1485,7 @@ export default {
                 "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 60,
             "weapon": "advancedrifle",
@@ -1513,7 +1513,7 @@ export default {
                 "Oțel": 1,
                 "Șuruburi": 5,
                 "Polimer": 1,
-                "Lupa": 1,
+                "Lupă": 1,
                 "Bec": 1
             },
             "line": 62,
@@ -1528,7 +1528,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 65,
             "weapon": "pistolmk2",
@@ -1542,7 +1542,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 66,
             "weapon": "microsmg",
@@ -1556,7 +1556,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 67,
             "weapon": "tecpistol",
@@ -1570,7 +1570,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 68,
             "weapon": "smg",
@@ -1584,7 +1584,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 69,
             "weapon": "assaultrifle",
@@ -1598,7 +1598,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 70,
             "weapon": "assaultriflemk2",
@@ -1612,7 +1612,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 12,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 71,
             "weapon": "assaultriflemk2",
@@ -1626,7 +1626,7 @@ export default {
                 "Oțel": 1,
                 "Șuruburi": 8,
                 "Polimer": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 72,
             "weapon": "assaultriflemk2",
@@ -1640,7 +1640,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 73,
             "weapon": "heavyrifle",
@@ -1654,7 +1654,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 74,
             "weapon": "combatmgmk2",
@@ -1668,7 +1668,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 12,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 75,
             "weapon": "combatmgmk2",
@@ -1682,7 +1682,7 @@ export default {
                 "Oțel": 1,
                 "Șuruburi": 8,
                 "Polimer": 1,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 76,
             "weapon": "combatmgmk2",
@@ -1819,7 +1819,7 @@ export default {
                 "Oțel": 2,
                 "Șuruburi": 10,
                 "Polimer": 2,
-                "Lupa": 1
+                "Lupă": 1
             },
             "line": 4,
             "source": "Atasamente Lipsa (1).txt",
@@ -1848,7 +1848,7 @@ export default {
                 "Oțel": 1,
                 "Șuruburi": 5,
                 "Polimer": 1,
-                "Lupa": 1,
+                "Lupă": 1,
                 "Bec": 1
             },
             "line": 6,
@@ -1869,7 +1869,7 @@ export default {
         "Gusenberg: niciun atașament definit în Atasamente.txt (nu au fost inventate).",
         "Double Action Revolver: niciun atașament definit în Atasamente.txt (nu au fost inventate).",
         "Navy Revolver: niciun atașament definit în Atasamente.txt (nu au fost inventate).",
-        "Lanterna Assault Rifle MK2 — corectată la cererea ta: necesită 1 Bec; Lupa rămâne conform fișierului original (nedefinită).",
+        "Lanterna Assault Rifle MK2 — corectată la cererea ta: necesită 1 Bec; Lupă rămâne conform fișierului original (nedefinită).",
         "Materiale Arme.txt — valorile „Total ... Oțel” din paranteze diferă de Oțel din rețete. Calculul folosește materialele enumerate înaintea parantezelor; nOțele originale sunt afișate separat, fără conversii presupuse.",
         "Atasamente Lipsa (1).txt — 6 variante importate: 1 pentru Mini SMG și 5 pentru Combat PDW."
     ]
