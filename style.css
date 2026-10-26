@@ -1353,3 +1353,121 @@ header nav button { padding: 0; text-align: left; line-height: 1.5; }
     .armory-approval { order: 3; flex-basis: 100%; padding-bottom: 6px; }
     .armory-approval > strong { font-size: 40px; }
 }
+
+/* Cinematic handoff: film collapse, orange seam, then the armory reveal. */
+.intro-leaving { pointer-events: none; animation: intro-film-exit 600ms cubic-bezier(.65, 0, .35, 1) forwards; transform-origin: center; }
+.intro-leaving::after { content: ''; position: absolute; inset: 0; z-index: 10; pointer-events: none; background: radial-gradient(ellipse at center, #ffad5266, #ff7a1a0d 45%, transparent 75%); animation: intro-last-glow 600ms ease-out both; }
+.app-reveal > header { animation: armory-header-arrive 1100ms cubic-bezier(.16, 1, .3, 1) both; }
+.app-reveal > main { animation: armory-content-arrive 1200ms 100ms cubic-bezier(.16, 1, .3, 1) both; }
+.app-reveal > footer { animation: armory-content-arrive 1000ms 200ms cubic-bezier(.16, 1, .3, 1) both; }
+.armory-transition { position: fixed; inset: 0; z-index: 100; pointer-events: none; overflow: hidden; background: #0b0b0c; animation: armory-curtain-open 1100ms cubic-bezier(.76, 0, .24, 1) forwards; }
+.armory-transition::before, .armory-transition::after { content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #ff7a1a 25%, #ffe1b5 50%, #ff7a1a 75%, transparent); box-shadow: 0 0 12px #ff7a1a, 0 0 35px #ff7a1a77; animation: armory-seam-upper 1100ms cubic-bezier(.76, 0, .24, 1) both; }
+.armory-transition::after { animation-name: armory-seam-lower; }
+.armory-transition > span { position: absolute; inset: 0; background: radial-gradient(ellipse at center, #ff7a1a25, transparent 65%); animation: armory-glow-fade 1000ms ease-out forwards; }
+@keyframes intro-film-exit {
+    0% { opacity: 1; transform: scale(1); filter: brightness(1); }
+    30% { opacity: 1; transform: scale(1.018); filter: brightness(1.12); }
+    100% { opacity: 0; transform: scale(.97); filter: brightness(.35) blur(5px); }
+}
+@keyframes intro-last-glow { 0%, 100% { opacity: 0; } 35% { opacity: .65; } }
+@keyframes armory-curtain-open {
+    0%, 8% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 100% 50%, 100% 50%, 0 50%, 0 100%); }
+    99% { opacity: 1; }
+    100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0, 0 0, 0 100%); opacity: 0; visibility: hidden; }
+}
+@keyframes armory-seam-upper { 0%, 8% { transform: translateY(0); opacity: 0; } 18% { opacity: 1; } 100% { transform: translateY(-50vh); opacity: 0; } }
+@keyframes armory-seam-lower { 0%, 8% { transform: translateY(0); opacity: 0; } 18% { opacity: 1; } 100% { transform: translateY(50vh); opacity: 0; } }
+@keyframes armory-glow-fade { from { opacity: 1; } to { opacity: 0; } }
+@keyframes armory-header-arrive { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: none; } }
+@keyframes armory-content-arrive { from { opacity: 0; transform: translateY(22px) scale(.99); filter: blur(3px); } to { opacity: 1; transform: none; filter: none; } }
+@media (prefers-reduced-motion: reduce) {
+    .intro-leaving, .intro-leaving::after, .app-reveal > header, .app-reveal > main, .app-reveal > footer { animation: none; }
+    .armory-transition { display: none; }
+}
+/* Shared cinematic styling for both calculators */
+.app-shell { min-height: 100dvh; position: relative; isolation: isolate; background: radial-gradient(ellipse 900px 500px at 48% 0, #ff7a1a0e, transparent 75%), #0d0d0f; }
+.app-shell::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(#ff7a1a04 1px, transparent 1px), linear-gradient(90deg, #ff7a1a04 1px, transparent 1px); background-size: 70px 70px; mask-image: linear-gradient(#000, transparent 1200px); }
+.app-shell > header { background: #0b0b0de8; border-bottom: 1px solid #ff7a1a20; }
+.app-shell .brand img { filter: drop-shadow(0 0 15px #ff7a1a22); }
+.app-shell header nav { gap: 8px; }
+.app-shell header nav button { padding: 13px 18px; border: 1px solid transparent; border-radius: 3px; font-size: 10px; letter-spacing: 1px; color: #99918a; transition: background .2s, border-color .2s, color .2s; }
+.app-shell header nav button.active { color: #ff963f; background: #ff7a1a0d; border-color: #ff7a1a35; }
+.app-shell header nav button:hover { color: #ffad6a; background: #ff7a1a12; }
+.page-kicker, .washing-intro .page-kicker { display: flex; align-items: center; gap: 12px; color: #c1936e; font: 9px monospace; letter-spacing: 2px; }
+.page-kicker::before { content: ''; width: 26px; height: 1px; background: var(--orange); box-shadow: 0 0 10px #ff7a1a66; }
+.washing-intro h1 { font: 800 clamp(34px, 4.5vw, 66px)/1 'Barlow Condensed', sans-serif; letter-spacing: -.5px; margin: 16px 0; }
+.washing-intro h1 em { color: var(--orange); text-shadow: 0 0 40px #ff7a1a20; font-style: normal; }
+.app-shell .notice { border-color: #ff7a1a30; border-left: 3px solid var(--orange); border-radius: 3px; background: linear-gradient(90deg, #ff7a1a0d, #ff7a1a03); padding: 16px 20px; margin-bottom: 30px; }
+.app-shell .notice b { color: #d4b69e; font-size: 11px; line-height: 1.6; }
+.app-shell .notice p { color: #958273; line-height: 1.6; }
+.catalog-heading { padding-bottom: 18px; border-bottom: 1px solid #ff7a1a20; }
+.catalog-heading h2 { font-size: 32px; letter-spacing: 1px; }
+.catalog-heading h2 > span { border: 1px solid #ff7a1a25; background: #ff7a1a0a; color: #cb946b; }
+.app-shell .search { background: #080809; border-color: #37302a; border-radius: 3px; transition: border-color .2s, box-shadow .2s; }
+.app-shell .search:focus-within { border-color: #ff7a1a88; box-shadow: 0 0 20px #ff7a1a0d; }
+.app-shell .arsenal-tabs { border-bottom-color: #ff7a1a1f; }
+.app-shell .arsenal-tabs button { letter-spacing: .3px; }
+.app-shell .arsenal-tabs button.selected { background: linear-gradient(0deg, #ff7a1a0b, transparent); }
+.app-shell .filters button { background: #121113; border-color: #302921; border-radius: 3px; color: #aaa097; transition: background .2s, border-color .2s; }
+.app-shell .filters button.selected { color: #17100a; background: var(--orange); border-color: #ffa561; box-shadow: 0 0 20px #ff7a1a18; }
+.app-shell .card { border-color: #332b25; background: linear-gradient(150deg, #1b1816, #131315 45%); border-radius: 5px; box-shadow: 0 5px 25px #0002; transition: border-color .25s, box-shadow .25s; }
+.app-shell .card:hover { border-color: #a45c2e; box-shadow: 0 0 28px #ff7a1a0a; }
+.app-shell .card .art { background: radial-gradient(ellipse at 50% 55%, #ff7a1a15, transparent 70%), repeating-linear-gradient(0deg, transparent, transparent 29px, #ff7a1a05 30px), repeating-linear-gradient(90deg, transparent, transparent 29px, #ff7a1a05 30px); border-bottom: 1px solid #ff7a1a14; }
+.app-shell .art .serial { color: #a47a59; letter-spacing: 1px; }
+.app-shell .art .type { border-color: #ff7a1a30; color: #b79374; background: #100d0b88; }
+.app-shell .weapon-image { transition: transform .4s; }
+.app-shell .card:hover .weapon-image { transform: scale(1.035); }
+.app-shell .primary { position: relative; background: linear-gradient(110deg, #ff7a1a, #ff953f); border: 1px solid #ffaa66; border-radius: 3px; letter-spacing: .3px; box-shadow: 0 4px 18px #ff7a1a12; transition: box-shadow .2s, filter .2s; }
+.app-shell .primary:hover { filter: brightness(1.08); box-shadow: 0 0 25px #ff7a1a30; }
+.app-shell .recipe-details { border-color: #3b3027; background: #09090b55; }
+.app-shell .attachment-select-row select, .app-shell .attachment-select-row input, .app-shell .stepper { border-color: #393027; background: #0c0b0d; }
+.app-shell .layout > aside { border-color: #5c3923; border-top: 2px solid var(--orange); border-radius: 5px; background: linear-gradient(160deg, #201812, #131315 220px); box-shadow: 0 12px 40px #0003; }
+.app-shell .layout > aside > .section-head { background: #1a1512; border-bottom-color: #ff7a1a25; }
+.app-shell .totals > .eyebrow { color: #ba8963; font: 9px monospace; letter-spacing: 1.5px; }
+.app-shell .totals h4 { font: 600 23px 'Barlow Condensed', sans-serif; letter-spacing: .5px; margin-top: 10px; }
+.app-shell .money-total { border-top-color: #ff7a1a30; }
+.app-shell .money-total b { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; }
+.app-shell .material-icon { background: #0d0c0e; border-color: #3b3027; }
+.app-shell footer { background: #0b0b0d; border-top-color: #ff7a1a20; }
+.washing-page { padding-top: 46px; }
+.washing-intro { text-align: left; margin-bottom: 32px; }
+.washing-intro .page-kicker { justify-content: flex-start; }
+.washing-intro > p:last-child { color: #9c9288; font-size: 12px; }
+.washing-calculator { position: relative; border-color: #614027; border-top: 2px solid var(--orange); border-radius: 5px; background: radial-gradient(ellipse at 85% 0, #ff7a1a0c, transparent 55%), linear-gradient(145deg, #1b1714, #121214 60%); box-shadow: 0 20px 70px #0003; padding: 34px; }
+.washing-calculator > .section-head { padding-bottom: 20px; border-bottom: 1px solid #ff7a1a20; }
+.washing-calculator > .section-head h2 { font-size: 28px; }
+.washing-calculator label { font: 10px monospace; text-transform: uppercase; letter-spacing: 1px; color: #c7ae99; margin-top: 24px; }
+.washing-calculator input { background: #09090b; border-color: #59402d; border-radius: 3px; font: 600 32px 'Barlow Condensed', sans-serif; padding: 18px; transition: border-color .2s, box-shadow .2s; }
+.washing-calculator input:focus { border-color: var(--orange); box-shadow: 0 0 28px #ff7a1a12; }
+.washing-comparison { margin-top: 32px; border-top-color: #ff7a1a25; }
+.washing-option { padding-top: 28px; }
+.washing-option + .washing-option { border-left-color: #ff7a1a25; padding-top: 28px; }
+.washing-route { font: 9px monospace; letter-spacing: 2px; color: #9c7354; margin: 0 0 20px; }
+.washing-option h2 { font-size: 30px; }
+.washing-rate { border: 1px solid #ff7a1a30; border-radius: 3px; background: #ff7a1a09; color: #ff9a4d; font: 10px monospace; padding: 8px 10px; }
+.washing-net { padding: 20px; border-left: 2px solid #ff7a1a88; background: linear-gradient(90deg, #ff7a1a09, transparent); margin-top: 28px; }
+.washing-net > span { color: #b99a80; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.washing-net output { font: 700 clamp(34px, 4vw, 54px)/1.1 'Barlow Condensed', sans-serif; text-shadow: 0 0 30px #ff7a1a1a; }
+.washing-option > .washing-help { padding-left: 22px; margin-top: 12px; }
+.washing-option .washing-loss { border-top-color: #ff7a1a20; }
+@media (max-width: 1000px) {
+    .app-shell header nav button { font-size: 9px; padding: 11px 13px; }
+}
+@media (max-width: 680px) {
+    .washing-intro h1 { font-size: clamp(32px, 8.7vw, 46px); line-height: 1.05; }
+    .page-kicker, .washing-intro .page-kicker { font-size: 8px; letter-spacing: 1px; }
+    .app-shell header nav { width: 100%; gap: 8px; }
+    .app-shell header nav button { flex: 1; font-size: 8px; padding: 10px 8px; letter-spacing: .5px; }
+    .app-shell .notice { padding: 12px; }
+    .catalog-heading h2 { font-size: 28px; }
+    .washing-page { padding-top: 30px; }
+    .washing-calculator { padding: 24px 20px; }
+    .washing-calculator > .section-head h2 { font-size: 25px; }
+    .washing-option { padding-top: 24px; }
+    .washing-option + .washing-option { border-top-color: #ff7a1a25; padding-top: 24px; }
+    .washing-option h2 { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .app-shell .card, .app-shell .weapon-image, .app-shell .primary, .app-shell header nav button, .washing-calculator input { transition: none; }
+}
+.app-shell #armory-view { padding-top: 28px; }

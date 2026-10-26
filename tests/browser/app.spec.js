@@ -4,6 +4,8 @@ async function finishIntro(page) {
     const video = page.locator('.intro-screen video');
     await expect.poll(() => video.evaluate(element => element.readyState)).toBeGreaterThanOrEqual(2);
     await video.dispatchEvent('ended');
+    await expect(page.locator('.intro-screen')).toHaveCount(0);
+    await page.locator('.app-shell').evaluate(element => Promise.all(element.getAnimations({subtree: true}).filter(animation => animation.effect.getTiming().iterations !== Infinity).map(animation => animation.finished)));
 }
 
 

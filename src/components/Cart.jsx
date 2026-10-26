@@ -18,11 +18,12 @@ export default function Cart({cart, onRemove, onClear}) {
         : 'Arme';
 
     function breakdown(dirty = false) {
+        if (weaponsCost === 0 && total.ammoFee === 0) return null;
         const price = dirty ? dirtyPrice : amount => amount;
         return <p className="money-equation">
-            <span>{fmt(price(weaponsCost))} $ <span className="money-equation-label">{weaponsLabel}</span></span>
-            <span aria-hidden="true"> + </span>
-            <span>{fmt(price(total.ammoFee))} $ <span className="money-equation-label">{fmt(billedBullets)} gloanțe</span></span>
+            {weaponsCost > 0 && <span>{fmt(price(weaponsCost))} $ <span className="money-equation-label">{weaponsLabel}</span></span>}
+            {weaponsCost > 0 && total.ammoFee > 0 && <span aria-hidden="true"> + </span>}
+            {total.ammoFee > 0 && <span>{fmt(price(total.ammoFee))} $ <span className="money-equation-label">{fmt(billedBullets)} gloanțe</span></span>}
         </p>;
     }
     return <aside tabIndex="0" role="region" aria-label="Configurația ta și total materiale — derulare independentă">

@@ -4,7 +4,7 @@ import {fmt, washMoney} from '../model.js';
 export default function WashingCalculator() {
     const [input, setInput] = useState({value: '', valid: true});
     return <div className="washing-page">
-        <div className="washing-intro"><p className="eyebrow">VIDRARIOS / CALCULATOARE</p><h1>CALCULATOR <em>SPĂLARE BANI</em></h1><p>Introdu suma de bani murdari pentru a vedea cât pierzi și câți bani curați primești.</p></div>
+        <div className="washing-intro"><p className="eyebrow page-kicker">VIDRARIOS / CALCULATOR FINANCIAR</p><h1>CALCULATOR <em>SPĂLARE BANI</em></h1><p>Introdu suma de bani murdari pentru a vedea cât pierzi și câți bani curați primești.</p></div>
         <section className="washing-calculator" aria-labelledby="washing-title">
             <div className="section-head"><h2 id="washing-title">Compară variantele de spălare</h2></div>
             <label htmlFor="washing-amount">Sumă bani murdari ($)</label>
@@ -15,6 +15,7 @@ export default function WashingCalculator() {
                 {[{name: 'Cayo', loss: 5}, {name: 'Chinez', loss: 35}].map(({name, loss}) => {
                     const result = washMoney(Number(input.value), loss), id = name.toLowerCase();
                     return <section className="washing-option" key={name} aria-labelledby={`${id}-title`}>
+                        <p className="washing-route">{loss === 5 ? '01 / CAYO' : '02 / CHINEZ'}</p>
                         <div className="section-head"><h2 id={`${id}-title`}>Bani spălați {name}</h2><span className="washing-rate">Pierdere {loss}%</span></div>
                         <div className="washing-net"><span>Bani curați primiți</span><output htmlFor="washing-amount">{input.valid ? `${fmt(result.clean)} $` : '—'}</output></div>
                         <p className="washing-help">Primești {100 - loss}% din suma introdusă.</p>

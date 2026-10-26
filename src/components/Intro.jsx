@@ -1,4 +1,4 @@
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 export default function Intro({onFinish}) {
     const video = useRef(null);
@@ -6,10 +6,18 @@ export default function Intro({onFinish}) {
     const activated = useRef(false);
     const [playing, setPlaying] = useState(false);
     const [retry, setRetry] = useState(false);
+    const [leaving, setLeaving] = useState(false);
+
+    useEffect(() => {
+        if (!leaving) return;
+        const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 620;
+        const timer = setTimeout(onFinish, delay);
+        return () => clearTimeout(timer);
+    }, [leaving, onFinish]);
 
     async function play() {
         const element = video.current;
-        if (!activated.current || !element || element.ended || element.error || starting.current) return;
+        if (leaving || !activated.current || !element || element.ended || element.error || starting.current) return;
         starting.current = true;
         element.muted = false;
         element.volume = 1;
@@ -27,7 +35,7 @@ export default function Intro({onFinish}) {
         void play();
     }
 
-    return <main className={`intro-screen cinematic-intro ${playing ? 'is-playing' : ''}`}>
+    return <main className={`intro-screen cinematic-intro ${playing ? 'is-playing' : ''} ${leaving ? 'intro-leaving' : ''}`}>
         <div className="intro-grid" aria-hidden="true" />
         <div className="intro-orbit" aria-hidden="true" />
         <div className="intro-embers" aria-hidden="true">{Array.from({length: 16}, (_, index) => <i key={index} style={{'--i': index}} />)}</div>
@@ -42,7 +50,7 @@ export default function Intro({onFinish}) {
         <div className="intro-video-stage" hidden={!playing}>
             <div className="intro-video-meta"><span><i /> VIDRARIOS / EXCLUSIVE TRANSMISSION</span><span>01 — INTRO</span></div>
             <div className="intro-video-frame" onContextMenu={event => event.preventDefault()}>
-                <video ref={video} src="assets/video/ValiFurtunaVDR.mp4" playsInline controlsList="nodownload nofullscreen noremoteplayback" disablePictureInPicture disableRemotePlayback preload="auto" tabIndex={-1} aria-label="Videoclip introductiv Vidrarios Armory" onEnded={onFinish} onPause={play} onError={() => {if (activated.current) onFinish();}} />
+                <video ref={video} src="assets/video/ValiFurtunaVDR.mp4" playsInline controlsList="nodownload nofullscreen noremoteplayback" disablePictureInPicture disableRemotePlayback preload="auto" tabIndex={-1} aria-label="Videoclip introductiv Vidrarios Armory" onEnded={() => setLeaving(true)} onPause={play} onError={() => {if (activated.current) setLeaving(true);}} />
             </div>
             {retry && <button className="armory-enter intro-retry" onClick={play}>REÎNCEARCĂ REDAREA →</button>}
         </div>
