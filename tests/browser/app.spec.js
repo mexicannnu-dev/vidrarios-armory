@@ -113,7 +113,9 @@ test('catalog, configuration, persistence and both calculators work together', a
     await expect(page.locator('.cart-item')).toContainText('3 × armă');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.screenshot({path: test.info().outputPath('catalog.png')});
-    await page.getByRole('button', {name: 'Șterge Pistol', exact: true}).click();
+    await card.getByRole('button', {name: 'Scoate Pistol din calculator', exact: true}).click();
     await expect(page.locator('.cart-item')).toHaveCount(0);
+    await expect(card.getByRole('button', {name: /Adaugă în calculator/})).toBeVisible();
+    await expect(card.getByRole('button', {name: 'Scoate Pistol din calculator', exact: true})).toHaveCount(0);
     expect(errors).toEqual([]);
 });

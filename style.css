@@ -1471,3 +1471,122 @@ header nav button { padding: 0; text-align: left; line-height: 1.5; }
     .app-shell .card, .app-shell .weapon-image, .app-shell .primary, .app-shell header nav button, .washing-calculator input { transition: none; }
 }
 .app-shell #armory-view { padding-top: 28px; }
+
+/* Weapon configuration controls */
+.app-shell .card .attachment-list { gap: 10px; border-bottom-color: #ff7a1a20; padding-top: 2px; }
+.app-shell .card .attachment-control { border: 1px solid #302820; border-radius: 5px; padding: 12px; background: linear-gradient(125deg, #ffffff03, #09090b55); transition: border-color .2s, background .2s; }
+.app-shell .card .attachment-control:hover { border-color: #715035; }
+.app-shell .card .attachment-control.has-selection { border-color: #a55c2c; background: linear-gradient(110deg, #ff7a1a0c, #09090b55); box-shadow: inset 2px 0 #ff7a1a; }
+.app-shell .attachment-control .field-title { margin-bottom: 9px; }
+.app-shell .attachment-control .field-title label { display: flex; align-items: center; gap: 7px; color: #c5b4a6; font-size: 10px; letter-spacing: .3px; }
+.app-shell .attachment-control.has-selection .field-title label { color: #ffad6a; }
+.app-shell .attachment-control .mini-icon { color: #d19060; font-size: 16px; }
+.app-shell .attachment-select-row { gap: 8px; }
+.app-shell .attachment-select-row select { appearance: none; padding: 11px 28px 11px 10px; border-radius: 4px; font: 11px Inter, Arial, sans-serif; color: #e7ddd3; cursor: pointer; background-color: #0b0a0c; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m2 2 4 4 4-4' fill='none' stroke='%23ff963f' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; transition: border-color .2s; }
+.app-shell .attachment-select-row select:hover { border-color: #b57643; }
+.app-shell .attachment-select-row select:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.app-shell .attachment-select-row option { background: #131113; color: #eee1d6; }
+.app-shell .attachment-select-row input { width: 60px; padding: 6px 3px; border-radius: 4px; font-weight: 700; color: #ffad6a; font-size: 12px; }
+.app-shell .attachment-select-row input:disabled { opacity: .3; color: #999; }
+.app-shell .attachment-recipe { margin-top: 9px; color: #9f8e80; font-size: 9px; line-height: 1.8; }
+.app-shell .card .quantity-row { margin-top: 7px; padding: 10px 12px; border: 1px solid #3b2d23; border-radius: 5px; background: linear-gradient(90deg, #ff7a1a07, #08080a55); gap: 10px; }
+.app-shell .quantity-row > span { color: #c5b4a6; font-size: 11px; }
+.app-shell .card .stepper { border: 1px solid #654024; border-radius: 4px; background: #09090b; box-shadow: inset 0 1px 6px #0005; flex-shrink: 0; }
+.app-shell .stepper button { width: 34px; height: 34px; color: #ffa565; font-size: 18px; background: #ff7a1a0a; transition: background .2s, color .2s; }
+.app-shell .stepper button:hover { background: var(--orange); color: #17100a; }
+.app-shell .stepper button:active { background: #ffad6a; }
+.app-shell .stepper input { width: 64px; height: 34px; padding: 0 3px; font-size: 13px; font-weight: 700; color: #fff0e3; border-inline: 1px solid #654024; }
+.app-shell .stepper:focus-within { border-color: var(--orange); box-shadow: 0 0 15px #ff7a1a15; }
+.app-shell .card .ammo-note { margin-top: 10px; padding: 10px 12px; min-height: 58px; border-left: 2px solid #ff7a1a55; background: #ff7a1a04; font-size: 9px; line-height: 1.8; }
+.app-shell .card .ammo-note > span { color: #f3b37e; }
+@media (max-width: 680px) {
+    .app-shell .card .attachment-control { padding: 10px; }
+    .app-shell .card .quantity-row { padding: 9px 10px; }
+    .app-shell .stepper button { width: 36px; height: 36px; }
+    .app-shell .stepper input { height: 36px; width: 60px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .app-shell .card .attachment-control, .app-shell .attachment-select-row select, .app-shell .stepper button { transition: none; }
+}
+/* Technical configuration design. */
+.design-technical .card .attachment-list { gap: 0; background: #09090b66; border: 1px solid #38312b; border-radius: 5px; padding: 0 8px; margin-top: 6px; scrollbar-color: #865b3c #101012; }
+.design-technical .card .attachment-control { border: 0; border-bottom: 1px solid #ffffff0d; border-radius: 0; background: transparent; padding: 14px 4px; box-shadow: none; }
+.design-technical .card .attachment-control:last-child { border-bottom: 0; }
+.design-technical .card .attachment-control:hover { background: #ffffff02; }
+.design-technical .card .attachment-control.has-selection { background: transparent; border-color: #ffffff0d; box-shadow: none; }
+.design-technical .attachment-control .field-title label { font: 10px monospace; color: #a89e94; letter-spacing: .5px; }
+.design-technical .attachment-control.has-selection .field-title label { color: #e1d5c8; }
+.design-technical .attachment-control.has-selection .field-title label::after { content: ''; width: 5px; height: 5px; margin-left: 5px; background: #ff963f; box-shadow: 0 0 8px #ff7a1a55; }
+.design-technical .attachment-select-row { gap: 0; border: 1px solid #403930; background: #151416; border-radius: 4px; overflow: hidden; transition: border-color .2s; }
+.design-technical .attachment-select-row:focus-within { border-color: #e08441; box-shadow: 0 0 0 2px #ff7a1a0c; }
+.design-technical .attachment-select-row select { border: 0; background-color: transparent; border-radius: 0; padding-block: 12px; color: #c6bdb4; }
+.design-technical .attachment-select-row select:focus-visible { outline-offset: -2px; }
+.design-technical .attachment-select-row input { border: 0; border-left: 1px solid #403930; border-radius: 0; background: #ffffff04; color: #f6e5d4; font-family: monospace; }
+.design-technical .attachment-control.has-selection .attachment-select-row { border-color: #8b5a35; }
+.design-technical .attachment-recipe { font: 9px/1.8 monospace; color: #86796d; padding-left: 2px; }
+.design-technical .card .quantity-row { background: #101012; border: 1px solid #35302a; padding: 10px 12px; border-radius: 4px; }
+.design-technical .quantity-row > span { font: 10px monospace; letter-spacing: .3px; color: #c6b9ad; }
+.design-technical .card .stepper { display: flex; gap: 4px; border: 0; background: transparent; box-shadow: none; overflow: visible; }
+.design-technical .stepper button { border: 1px solid #5a422f; border-radius: 3px; background: #231b15; color: #d59b6d; font-size: 17px; width: 30px; height: 32px; }
+.design-technical .stepper input { border: 1px solid #514235; border-radius: 3px; background: #070709; width: 62px; height: 32px; font: 700 14px monospace; color: #ffb172; }
+.design-technical .stepper button:hover { background: #ff7a1a; color: #160e08; border-color: #ffad6a; }
+.design-technical .card .ammo-note { background: #0b0b0d; border: 1px dashed #60442e; border-radius: 4px; padding: 10px 12px; font-family: monospace; color: #a09385; }
+.design-technical .card .ammo-note > span { color: #e0b591; }
+@media (max-width: 680px) {
+    .design-technical .stepper button { width: 34px; height: 36px; }
+    .design-technical .stepper input { height: 36px; width: 58px; }
+}
+/* Emphasize attachment and quantity controls in both designs. */
+.app-shell .card .attachment-control .field-title label,
+.app-shell .card .attachment-select-row select,
+.app-shell .card .attachment-select-row option,
+.app-shell .card .quantity-row > span {
+    font-weight: 700;
+}
+.app-shell .card .recipe-quantity {
+    font-weight: 800;
+    color: #f3d1b3;
+}
+/* Bold material names and ammunition details on weapon cards. */
+.app-shell .card .recipe-details p,
+.app-shell .card .attachment-recipe,
+.app-shell .card .ammo-note {
+    font-weight: 700;
+}
+/* Legible material recipes and a dedicated configuration action. */
+.app-shell .card .attachment-recipe,
+.app-shell .card .ammo-note {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.8;
+    color: #d6c6b7;
+}
+.app-shell .card .ammo-note > span { color: #edc5a3; }
+.app-shell .card .attachment-recipe .recipe-quantity,
+.app-shell .card .ammo-note .recipe-quantity { color: #ffc28f; font-weight: 800; }
+.app-shell .card .configure-button { display: flex; align-items: center; gap: 11px; min-height: 60px; padding: 10px 12px; text-align: left; background: linear-gradient(110deg, #291b12, #171315 75%); border: 1px solid #a6602f; border-left: 3px solid var(--orange); border-radius: 4px; color: #ffb77f; box-shadow: inset 0 1px #ffffff05, 0 4px 15px #0002; transition: border-color .2s, box-shadow .2s, background .2s; }
+.configure-button-icon { display: grid; place-items: center; width: 30px; height: 30px; flex: 0 0 30px; border: 1px solid #ff7a1a55; border-radius: 3px; background: #ff7a1a12; color: #ff9a4d; font-size: 21px; font-weight: 500; }
+.configure-button-copy { display: flex; flex-direction: column; gap: 5px; min-width: 0; flex: 1; }
+.configure-button-copy > span { font-size: 11px; font-weight: 800; line-height: 1.4; }
+.configure-button-copy > small { color: #af8b6f; font: 7px/1.5 monospace; letter-spacing: .7px; }
+.configure-button-arrow { font-size: 21px; color: #df9460; transition: transform .2s; }
+.app-shell .card .configure-button:hover { background: linear-gradient(110deg, #422714, #201713); border-color: #ff963f; box-shadow: 0 0 24px #ff7a1a16; filter: none; }
+.configure-button:hover .configure-button-arrow { transform: translate(2px, -2px); }
+.app-shell .card .configure-button.is-added { border-color: #725037; border-left-color: #ffad6a; background: linear-gradient(110deg, #251d15, #121214); }
+.configure-button.is-added .configure-button-icon { background: #ff7a1a; color: #17100a; border-color: #ffad6a; font-size: 17px; }
+.configure-button.is-added .configure-button-copy > small { color: #d0aa88; }
+@media (prefers-reduced-motion: reduce) {
+    .app-shell .card .configure-button, .configure-button-arrow { transition: none; }
+}
+/* Readable action text with a separate, accessible removal target. */
+.app-shell .card .configure-action { position: relative; flex-shrink: 0; margin-top: 10px; }
+.app-shell .card .configure-action .configure-button { margin-top: 0; width: 100%; min-height: 66px; background: #2b1c12; color: #fff0df; border-color: #cb7a3f; }
+.app-shell .card .configure-action .configure-button.is-added { background: #211b16; color: #fff0df; border-color: #a87850; }
+.app-shell .card .configure-action .configure-button:hover { background: #3b2719; border-color: #ffad6a; }
+.configure-action .configure-button-copy > span { font-size: 12px; line-height: 1.5; letter-spacing: 0; color: #fff0df; }
+.configure-action .configure-button-copy > small { font: 600 9px/1.5 Inter, Arial, sans-serif; letter-spacing: .15px; color: #d7b99e; }
+.configure-action.has-remove .configure-button { padding-right: 55px; }
+.configure-remove { position: absolute; right: 9px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #b2794f; border-radius: 4px; background: #38251a; color: #ffe3ca; font: 400 25px/1 Arial, sans-serif; transition: background .2s, border-color .2s; }
+.configure-remove:hover { background: #713326; border-color: #f39b7c; color: #fff; }
+.configure-remove:active { background: #8c3e2c; }

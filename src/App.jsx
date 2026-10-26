@@ -53,13 +53,12 @@ export default function App() {
         if (!validItem(item)) { notify('Introdu cantități valide între 0 și 999999 (minimum 1 pentru arme și atașamente).'); return; }
         const exists = cart.some(saved => saved.weapon === item.weapon);
         setCart(previous => exists ? previous.map(saved => saved.weapon === item.weapon ? item : saved) : [...previous, item]);
-        notify(exists ? 'Configurație actualizată' : 'Configurație adăugată în coș');
     }
     const list = weapons.filter(w => (arsenal === 'neo' ? w.price > 0 : w.price === 0) && (category === 'Toate' || w.category === category) && w.name.toLowerCase().includes(search.toLowerCase()));
 
     if (intro) return <Intro onFinish={() => {setEnteredFromIntro(true); setIntro(false); window.scrollTo({top: 0, behavior: 'instant'});}} />;
 
-    return <div className={enteredFromIntro ? 'app-shell app-reveal' : 'app-shell'}>
+    return <div className={`app-shell design-technical ${enteredFromIntro ? 'app-reveal' : ''}`}>
         {enteredFromIntro && <div className="armory-transition" aria-hidden="true"><span /></div>}
         <header><a className="brand" href="/" onClick={e => {e.preventDefault(); navigate('armory');}}><img src="assets/logo.png" alt="Logo Vidrarios" /><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>
             <nav aria-label="Navigare principală">{[{id: 'armory', label: 'CALCULATOR MATERIALE ARME'}, {id: 'washing', label: 'CALCULATOR SPĂLARE BANI'}].map(({id, label}) => <button key={id} type="button" className={view === id ? 'active' : ''} aria-controls={`${id}-view`} aria-pressed={view === id} onClick={() => navigate(id)}><b>{label}</b></button>)}</nav>
@@ -71,7 +70,7 @@ export default function App() {
                     <div className="section-head catalog-heading"><h2>ARMORY <span>{list.length}</span></h2><div className="armory-approval"><span>Approved by</span><strong>Vali Furtuna</strong></div><label className="search">⌕ <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Caută o armă…" aria-label="Caută o armă" /></label></div>
                     <div className="arsenal-tabs" aria-label="Tip arsenal">{[{id: 'craft', name: 'Civili'}, {id: 'neo', name: 'Neo & Oficiale'}].map(({id, name}) => <button key={id} className={arsenal === id ? 'selected' : ''} aria-pressed={arsenal === id} onClick={() => {setArsenal(id); setCategory('Toate'); setSearch('');}}>{name}<span>{weapons.filter(w => id === 'neo' ? w.price > 0 : w.price === 0).length}</span></button>)}</div>
                     <div className="filters">{['Toate', 'Pistol', 'SMG', 'RIFLE/LMG'].map(name => <button key={name} className={category === name ? 'selected' : ''} aria-pressed={category === name} onClick={() => setCategory(name)}>{name}</button>)}</div>
-                    <div className="cards">{list.map(w => <WeaponCard key={w.id} weapon={w} draft={drafts[w.id] || emptyDraft(w)} added={cart.some(item => item.weapon === w.id)} onChange={changeDraft} onAdd={add} />)}{!list.length && <div className="no-results">Nicio armă găsită. Încearcă alt nume.</div>}</div>
+                    <div className="cards">{list.map(w => <WeaponCard key={w.id} weapon={w} draft={drafts[w.id] || emptyDraft(w)} added={cart.some(item => item.weapon === w.id)} onChange={changeDraft} onAdd={add} onRemove={id => setCart(previous => previous.filter(item => item.weapon !== id))} />)}{!list.length && <div className="no-results">Nicio armă găsită. Încearcă alt nume.</div>}</div>
                     <p className="footnote">01 — Selectează &nbsp; / &nbsp; 02 — Configurează &nbsp; / &nbsp; 03 — Adaugă în calculator</p>
                 </section><Cart cart={cart} onRemove={id => setCart(previous => previous.filter(item => item.weapon !== id))} onClear={() => {setCart([]); notify('Coșul a fost golit');}} /></div>
             </div>
