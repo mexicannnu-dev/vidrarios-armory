@@ -1242,3 +1242,13 @@ header nav .active {
     .washing-page { padding-top: 26px; }
     .washing-calculator { padding: 20px; }
 }
+/* In-page navigation and calculator panels */
+[data-page-view][hidden] { display: none; }
+.washing-page { margin-inline: auto; padding-inline: 0; }
+header nav button { padding: 0; text-align: left; line-height: 1.5; }
+@media (max-width: 1000px) {
+    header nav button { font-size: 11px; max-width: none; }
+}
+@media (max-width: 680px) {
+    header nav button { font-size: 10px; max-width: none; }
+}

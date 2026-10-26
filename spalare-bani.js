@@ -25,3 +25,27 @@ function updateWashing() {
 
 washingInput.addEventListener('input', updateWashing);
 updateWashing();
+// Switch calculators within the same document without changing the URL.
+document.querySelectorAll('[data-view]').forEach(control => {
+    control.addEventListener('click', event => {
+        event.preventDefault();
+        const view = control.dataset.view;
+        document.querySelectorAll('[data-page-view]').forEach(panel => {
+            panel.hidden = panel.dataset.pageView !== view;
+        });
+        document.querySelectorAll('nav [data-view]').forEach(button => {
+            const active = button.dataset.view === view;
+            button.classList.toggle('active', active);
+            button.setAttribute('aria-pressed', String(active));
+        });
+        document.title = view === 'washing'
+            ? 'Calculator spălare bani | Vidrarios Armory'
+            : 'Vidrarios Armory';
+        window.scrollTo({top: 0, behavior: 'instant'});
+    });
+});
+
+// Keep the public address clean when opening an explicit index.html link.
+if (/^https?:$/.test(window.location.protocol) && /\/index\.html$/.test(window.location.pathname)) {
+    window.history.replaceState(null, '', window.location.pathname.replace(/index\.html$/, '') + window.location.search);
+}

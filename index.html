@@ -5,10 +5,14 @@
 <title>Vidrarios Armory</title>
 <link rel="stylesheet" href="style.css">
 <body>
-<header><a class="brand" href="#"><img src="assets/logo.png" alt="Logo Vidrarios"><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>
-    <nav aria-label="Navigare principală"><a class="active" href="#catalog" aria-current="page"><b>CALCULATOR MATERIALE ARME</b></a><a href="spalare-bani.html"><b>CALCULATOR SPĂLARE BANI</b></a></nav>
+<header><a class="brand" href="/" data-view="armory"><img src="assets/logo.png" alt="Logo Vidrarios"><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>
+    <nav aria-label="Navigare principală">
+        <button type="button" class="active" data-view="armory" aria-controls="armory-view" aria-pressed="true"><b>CALCULATOR MATERIALE ARME</b></button>
+        <button type="button" data-view="washing" aria-controls="washing-view" aria-pressed="false"><b>CALCULATOR SPĂLARE BANI</b></button>
+    </nav>
 </header>
 <main>
+<div id="armory-view" data-page-view="armory">
     <p></p>
     <div class="notice"><span aria-hidden="true">◈</span>
         <div><b>Minimum 500 de gloanțe per tip de armă pentru comandă</b>
@@ -38,12 +42,43 @@
                 <small>Configurația se salvează în acest browser.</small></div>
         </aside>
     </div>
+</div>
+<div id="washing-view" class="washing-page" data-page-view="washing" hidden>
+    <div class="washing-intro">
+        <p class="eyebrow">VIDRARIOS / CALCULATOARE</p>
+        <h1>CALCULATOR <em>SPĂLARE BANI</em></h1>
+        <p>Introdu suma de bani murdari pentru a vedea cât pierzi și câți bani curați primești.</p>
+    </div>
+    <section class="washing-calculator" aria-labelledby="washing-title">
+        <div class="section-head"><h2 id="washing-title">Compară variantele de spălare</h2></div>
+        <label for="washing-amount">Sumă bani murdari ($)</label>
+        <input id="washing-amount" type="number" min="0" max="1000000000000" step="0.01" placeholder="Ex: 100000" inputmode="decimal" aria-describedby="washing-help washing-error">
+        <p id="washing-help" class="washing-help">Introdu suma o singură dată. Ambele variante se calculează automat.</p>
+        <p id="washing-error" class="washing-error" hidden>Introdu o sumă între 0 și 1.000.000.000.000, cu maximum 2 zecimale.</p>
+        <div class="washing-comparison" role="status" aria-live="polite" aria-atomic="true">
+            <section class="washing-option" data-loss="5" aria-labelledby="cayo-title">
+                <div class="section-head"><h2 id="cayo-title">Bani spălați Cayo</h2><span class="washing-rate">Pierdere 5%</span></div>
+                <div class="washing-net"><span>Bani curați primiți</span><output data-clean for="washing-amount">0 $</output></div>
+                <p class="washing-help">Primești 95% din suma introdusă.</p>
+                <div class="washing-loss"><span>Bani pierduți (5%)</span><output data-lost for="washing-amount">0 $</output></div>
+            </section>
+            <section class="washing-option" data-loss="35" aria-labelledby="chinez-title">
+                <div class="section-head"><h2 id="chinez-title">Bani spălați Chinez</h2><span class="washing-rate">Pierdere 35%</span></div>
+                <div class="washing-net"><span>Bani curați primiți</span><output data-clean for="washing-amount">0 $</output></div>
+                <p class="washing-help">Primești 65% din suma introdusă.</p>
+                <div class="washing-loss"><span>Bani pierduți (35%)</span><output data-lost for="washing-amount">0 $</output></div>
+            </section>
+        </div>
+    </section>
+    <noscript><p>Activează JavaScript pentru a utiliza calculatorul.</p></noscript>
+</div>
 </main>
 <footer><b>VIDRARIOS ARMORY</b><span>Planifică. Configurează. Fii pregătit.</span><span>© 2026 Vidrarios Armory · Made by MeXicaNu</span>
 </footer>
 <div id="toast" role="status"></div>
 <script src="catalog.js"></script>
 <script src="main.js"></script>
+<script src="spalare-bani.js"></script>
 </body>
 </html>
 
