@@ -26,7 +26,7 @@ export default function Cart({cart, onRemove, onClear}) {
             <div className="money-options"><p>Alternative de plată pentru arme și taxa comenzii de gloanțe (fără atașamente).</p>
                 {total.ammoFee > 0 && <p>Taxă comandă gloanțe inclusă: {fmt(total.ammoFee)} $ curați / {fmt(dirtyPrice(total.ammoFee))} $ murdari.</p>}
                 <div className="money-total"><span>Total $ curați</span><b>{fmt(total.money)}</b></div><div className="money-total dirty-total"><span>Total $ murdari <small>+15%</small></span><b>{fmt(dirtyPrice(total.money))}</b></div></div>
-            <p className="quantity-help">De la 500 de gloanțe introduse în total, se adaugă o singură taxă de 5.000 $ curați (5.750 $ murdari). Poți calcula orice cantitate, inclusiv sub 500.</p>
+            <p className="quantity-help">Fiecare grup complet de 500 de gloanțe introduse în total costă 5.000 $ curați (5.750 $ murdari): 1.000 de gloanțe = 10.000 $ curați. Poți calcula orice cantitate, inclusiv sub 500.</p>
             <p className="quantity-help">Prețurile armelor se adună separat. Muniția se produce în loturi de 10, rotunjite în sus.</p>
             <small>Configurația se salvează în acest browser.</small>
         </div>

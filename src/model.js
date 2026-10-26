@@ -41,7 +41,7 @@ export function totals(cart) {
         for (const a of item.attachments) add(attachmentById(a.id).materials, a.qty);
     }
     const bullets = cart.reduce((sum, item) => sum + item.bullets, 0);
-    const ammoFee = bullets >= 500 ? 5000 : 0;
+    const ammoFee = Math.floor(bullets / 500) * 5000;
     return {materials, money: money + ammoFee, ammoFee};
 }
 

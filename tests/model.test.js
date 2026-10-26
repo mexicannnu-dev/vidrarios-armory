@@ -43,19 +43,22 @@ test('washing returns both rates and preserves cents', () => {
     assert.deepEqual(washMoney(0, 35), {lost: 0, clean: 0});
 });
 
-test('ammo order fee applies once at 500 entered bullets and includes dirty markup', () => {
+test('ammo cost increases for each complete group of 500 bullets and includes dirty markup', () => {
     const w = weapons.find(w => w.price > 0);
-    for (const bullets of [0, 1, 499, 500, 501, 1000]) {
+    for (const bullets of [0, 1, 499, 500, 501, 999, 1000, 1499, 1500, 2000]) {
         const item = {...emptyDraft(w), qty: 2, bullets};
         assert.ok(validItem(item));
         const total = totals([item]);
-        const fee = bullets >= 500 ? 5000 : 0;
+        const fee = Math.floor(bullets / 500) * 5000;
         assert.equal(total.ammoFee, fee);
         assert.equal(total.money, w.price * 2 + fee);
         assert.equal(dirtyPrice(total.money), dirtyPrice(w.price * 2) + dirtyPrice(fee));
     }
     const cart = weapons.slice(0, 2).map(w => ({...emptyDraft(w), bullets: 250}));
     assert.equal(totals(cart).ammoFee, 5000);
+    cart.forEach(item => { item.bullets = 500; });
+    assert.equal(totals(cart).ammoFee, 10000);
+    cart[1].bullets = 250;
     cart[0].bullets = 249;
     assert.equal(totals(cart).ammoFee, 0);
     assert.equal(dirtyPrice(5000), 5750);
