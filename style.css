@@ -1207,7 +1207,7 @@ header nav .active {
 }
 
 /* Money washing calculators */
-.washing-page { width: 100%; max-width: 1060px; min-height: calc(100vh - 200px); padding-top: 42px; padding-bottom: 48px; }
+.washing-page { width: 100%; min-height: calc(100vh - 200px); padding-top: 42px; padding-bottom: 48px; }
 .washing-intro { margin-bottom: 32px; text-align: center; }
 .washing-intro .eyebrow { color: var(--orange); font-size: 10px; letter-spacing: 2px; }
 .washing-intro h1 { font: 700 clamp(32px, 4vw, 52px) 'Barlow Condensed', sans-serif; margin: 14px 0; }
