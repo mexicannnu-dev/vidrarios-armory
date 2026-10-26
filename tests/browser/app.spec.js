@@ -1,5 +1,24 @@
 import {test, expect} from '@playwright/test';
 
+test('calculator sections keep the same width and alignment when switching', async ({page}) => {
+    await page.goto('/');
+    const bounds = selector => page.locator(selector).evaluate(element => {
+        const {x, width} = element.getBoundingClientRect();
+        return {x, width};
+    });
+    const header = await bounds('header');
+    const main = await bounds('main');
+    const armory = await bounds('#armory-view .layout');
+    await page.getByRole('button', {name: 'CALCULATOR SPĂLARE BANI', exact: true}).click();
+    expect(await bounds('header')).toEqual(header);
+    expect(await bounds('main')).toEqual(main);
+    expect(await bounds('.washing-calculator')).toEqual(armory);
+    // Short content must reserve the same scrollbar space as the long catalog.
+    await page.addStyleTag({content: '.washing-page {min-height: 0; padding-block: 0}'});
+    expect(await bounds('main')).toEqual(main);
+    expect(await bounds('.washing-calculator')).toEqual(armory);
+});
+
 test('catalog, configuration, persistence and both calculators work together', async ({page}) => {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));

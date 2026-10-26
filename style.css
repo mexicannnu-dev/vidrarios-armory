@@ -12,7 +12,8 @@
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable
 }
 
 body {
