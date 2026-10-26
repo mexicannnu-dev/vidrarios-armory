@@ -1217,7 +1217,7 @@ header nav .active {
 .washing-option { min-width: 0; padding: 26px 26px 0 0; }
 .washing-option + .washing-option { border-left: 1px solid var(--line); padding: 26px 0 0 26px; }
 .washing-option h2 { font-size: 24px; }
-.washing-calculator { background: #19191b; border: 1px solid var(--line); border-radius: 7px; padding: 26px; min-width: 0; }
+.washing-calculator { background: #19191b; border: 1px solid var(--line); border-radius: 7px; padding: 38px 26px; min-width: 0; }
 .washing-calculator .section-head { flex-wrap: wrap; }
 .washing-rate { color: var(--orange); background: #ff7a1a18; border-radius: 4px; padding: 7px 10px; font-size: 11px; }
 .washing-calculator label { display: block; color: #ccc; font-size: 12px; margin-bottom: 10px; }
@@ -1228,8 +1228,8 @@ header nav .active {
 
 .washing-loss, .washing-net { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .washing-loss { color: #aaa; font-size: 12px; }
-.washing-net { flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 26px; color: var(--orange); }
-.washing-option .washing-loss { margin-top: 22px; padding-top: 18px; border-top: 1px dashed #3b3b3d; }
+.washing-net { flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 36px; color: var(--orange); }
+.washing-option .washing-loss { margin-top: 32px; padding-top: 24px; border-top: 1px dashed #3b3b3d; }
 .washing-net output { font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; overflow-wrap: anywhere; }
 @media (max-width: 1000px) {
     header { height: auto; min-height: 100px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
@@ -1241,7 +1241,7 @@ header nav .active {
     .washing-option { padding: 24px 0; }
     .washing-option + .washing-option { border-left: 0; border-top: 1px solid var(--line); padding: 24px 0 0; }
     .washing-page { padding-top: 26px; }
-    .washing-calculator { padding: 20px; }
+    .washing-calculator { padding: 28px 20px; }
 }
 /* In-page navigation and calculator panels */
 [data-page-view][hidden] { display: none; }
