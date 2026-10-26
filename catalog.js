@@ -4,13 +4,13 @@ const CATALOG = {
             "id": "pistol",
             "name": "Pistol",
             "materials": {
-                "Otel": 8,
-                "Suruburi": 80,
+                "Oțel": 8,
+                "Șuruburi": 80,
                 "Arc Metalic": 1,
                 "Polimer": 20
             },
             "price": 0,
-            "note": " Total 12x Otel ",
+            "note": " Total 12x Oțel ",
             "line": 3,
             "attachments": [
                 "att-1",
@@ -26,12 +26,12 @@ const CATALOG = {
             "id": "combatpistol",
             "name": "Combat Pistol",
             "materials": {
-                "Otel": 8,
-                "Suruburi": 85,
+                "Oțel": 8,
+                "Șuruburi": 85,
                 "Polimer": 18
             },
             "price": 0,
-            "note": " Total 13x Otel ",
+            "note": " Total 13x Oțel ",
             "line": 4,
             "attachments": [
                 "att-2",
@@ -47,13 +47,13 @@ const CATALOG = {
             "id": "pistolmk2",
             "name": "Pistol MK2",
             "materials": {
-                "Otel": 9,
-                "Suruburi": 91,
+                "Oțel": 9,
+                "Șuruburi": 91,
                 "Arc Metalic": 1,
                 "Polimer": 22
             },
             "price": 0,
-            "note": " Total 14x Otel ",
+            "note": " Total 14x Oțel ",
             "line": 5,
             "attachments": [
                 "att-3",
@@ -70,13 +70,13 @@ const CATALOG = {
             "id": "ceramicpistol",
             "name": "Ceramic Pistol",
             "materials": {
-                "Otel": 9,
-                "Suruburi": 91,
+                "Oțel": 9,
+                "Șuruburi": 91,
                 "Arc Metalic": 1,
                 "Polimer": 18
             },
             "price": 0,
-            "note": "  Total 14x Otel ",
+            "note": "  Total 14x Oțel ",
             "line": 6,
             "attachments": [
                 "att-4",
@@ -91,13 +91,13 @@ const CATALOG = {
             "id": "pistolxm3",
             "name": "Pistol XM3",
             "materials": {
-                "Otel": 10,
-                "Suruburi": 95,
+                "Oțel": 10,
+                "Șuruburi": 95,
                 "Arc Metalic": 1,
                 "Polimer": 20
             },
             "price": 0,
-            "note": " Total 15x Otel ",
+            "note": " Total 15x Oțel ",
             "line": 7,
             "attachments": [
                 "att-5"
@@ -111,14 +111,14 @@ const CATALOG = {
             "id": "microsmg",
             "name": "Micro SMG",
             "materials": {
-                "Otel": 15,
-                "Suruburi": 95,
+                "Oțel": 15,
+                "Șuruburi": 95,
                 "Arc Metalic": 1,
                 "Polimer": 42,
-                "Teava Metalica": 1
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 24x Otel ",
+            "note": " Total 24x Oțel ",
             "line": 8,
             "attachments": [
                 "att-6",
@@ -135,13 +135,13 @@ const CATALOG = {
             "id": "tec9",
             "name": "TEC-9",
             "materials": {
-                "Otel": 12,
-                "Suruburi": 100,
+                "Oțel": 12,
+                "Șuruburi": 100,
                 "Arc Metalic": 1,
                 "Polimer": 38
             },
             "price": 0,
-            "note": " Total 17x Otel ",
+            "note": " Total 17x Oțel ",
             "line": 9,
             "attachments": [
                 "att-7",
@@ -156,14 +156,14 @@ const CATALOG = {
             "id": "minismg",
             "name": "Mini SMG",
             "materials": {
-                "Otel": 11,
-                "Suruburi": 97,
+                "Oțel": 11,
+                "Șuruburi": 97,
                 "Arc Metalic": 1,
                 "Polimer": 36,
-                "Bucata de Lemn": 1
+                "Bucată de Lemn": 1
             },
             "price": 0,
-            "note": " Total 16x Otel ",
+            "note": " Total 16x Oțel ",
             "line": 10,
             "attachments": [
                 "att-76"
@@ -177,14 +177,14 @@ const CATALOG = {
             "id": "tecpistol",
             "name": "TEC-Pistol",
             "materials": {
-                "Otel": 14,
-                "Suruburi": 115,
+                "Oțel": 14,
+                "Șuruburi": 115,
                 "Arc Metalic": 1,
                 "Polimer": 44,
-                "Teava Metalica": 1
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 24x Otel ",
+            "note": " Total 24x Oțel ",
             "line": 11,
             "attachments": [
                 "att-8",
@@ -200,14 +200,14 @@ const CATALOG = {
             "id": "smg",
             "name": "SMG",
             "materials": {
-                "Otel": 13,
-                "Suruburi": 105,
+                "Oțel": 13,
+                "Șuruburi": 105,
                 "Arc Metalic": 1,
                 "Polimer": 48,
-                "Teava Metalica": 1
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 23x Otel ",
+            "note": " Total 23x Oțel ",
             "line": 12,
             "attachments": [
                 "att-9",
@@ -225,14 +225,14 @@ const CATALOG = {
             "id": "combatpdw",
             "name": "Combat PDW",
             "materials": {
-                "Otel": 14,
-                "Suruburi": 110,
+                "Oțel": 14,
+                "Șuruburi": 110,
                 "Arc Metalic": 1,
                 "Polimer": 50,
-                "Teava Metalica": 1
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 24x Otel ",
+            "note": " Total 24x Oțel ",
             "line": 13,
             "attachments": [
                 "att-77",
@@ -250,15 +250,15 @@ const CATALOG = {
             "id": "assaultrifle",
             "name": "Assault Rifle",
             "materials": {
-                "Otel": 21,
-                "Suruburi": 135,
+                "Oțel": 21,
+                "Șuruburi": 135,
                 "Arc Metalic": 2,
                 "Polimer": 68,
-                "Bucata de Lemn": 1,
-                "Teava Metalica": 1
+                "Bucată de Lemn": 1,
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 28x Otel ",
+            "note": " Total 28x Oțel ",
             "line": 14,
             "attachments": [
                 "att-10",
@@ -277,15 +277,15 @@ const CATALOG = {
             "id": "compactrifle",
             "name": "Compact Rifle",
             "materials": {
-                "Otel": 19,
-                "Suruburi": 115,
+                "Oțel": 19,
+                "Șuruburi": 115,
                 "Arc Metalic": 2,
                 "Polimer": 44,
-                "Bucata de Lemn": 1,
-                "Teava Metalica": 1
+                "Bucată de Lemn": 1,
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 25x Otel ",
+            "note": " Total 25x Oțel ",
             "line": 15,
             "attachments": [
                 "att-41",
@@ -300,14 +300,14 @@ const CATALOG = {
             "id": "carbinerifle",
             "name": "Carabine Rifle",
             "materials": {
-                "Otel": 18,
-                "Suruburi": 140,
+                "Oțel": 18,
+                "Șuruburi": 140,
                 "Arc Metalic": 2,
                 "Polimer": 72,
-                "Teava Metalica": 1
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 29x Otel ",
+            "note": " Total 29x Oțel ",
             "line": 16,
             "attachments": [
                 "att-11",
@@ -322,14 +322,14 @@ const CATALOG = {
             "id": "advancedrifle",
             "name": "Advanced Rifle",
             "materials": {
-                "Otel": 18,
-                "Suruburi": 145,
+                "Oțel": 18,
+                "Șuruburi": 145,
                 "Arc Metalic": 2,
                 "Polimer": 78,
-                "Teava Metalica": 1
+                "Țeavă Metalică": 1
             },
             "price": 0,
-            "note": " Total 30x Otel ",
+            "note": " Total 30x Oțel ",
             "line": 17,
             "attachments": [
                 "att-12",
@@ -345,11 +345,11 @@ const CATALOG = {
             "id": "assaultriflemk2",
             "name": "Assault Rifle MK2",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 70000,
             "note": "Total 0 | 70.000",
@@ -380,11 +380,11 @@ const CATALOG = {
             "id": "heavyrifle",
             "name": "Heavy Rifle",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 60000,
             "note": "Total 0 | 60.000",
@@ -405,11 +405,11 @@ const CATALOG = {
             "id": "combatmgmk2",
             "name": "Combat MG MK2",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 120000,
             "note": "Total 0 | 120.000",
@@ -438,11 +438,11 @@ const CATALOG = {
             "id": "mg",
             "name": "MG",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 90000,
             "note": "Total 0 | 90.000",
@@ -457,11 +457,11 @@ const CATALOG = {
             "id": "gusenberg",
             "name": "Gusenberg",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 45000,
             "note": "Total 0 | 45.000",
@@ -476,11 +476,11 @@ const CATALOG = {
             "id": "doubleactionrevolver",
             "name": "Double Action Revolver",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 250000,
             "note": "Total 0 | 250.000",
@@ -495,11 +495,11 @@ const CATALOG = {
             "id": "navyrevolver",
             "name": "Navy Revolver",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 400000,
             "note": "Total 0 | 400.000",
@@ -514,11 +514,11 @@ const CATALOG = {
             "id": "vintagepistol",
             "name": "Vintage Pistol",
             "materials": {
-                "Otel": 0,
-                "Suruburi": 0,
+                "Oțel": 0,
+                "Șuruburi": 0,
                 "Arc Metalic": 0,
                 "Polimer": 0,
-                "Teava Metalica": 0
+                "Țeavă Metalică": 0
             },
             "price": 25000,
             "note": "Total 0 | 25.000",
@@ -539,7 +539,7 @@ const CATALOG = {
             "name": "Muniție Pistol",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 10
+                "Praf de Pușcă": 10
             },
             "line": 3
         },
@@ -548,7 +548,7 @@ const CATALOG = {
             "name": "Muniție Combat Pistol",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 10
+                "Praf de Pușcă": 10
             },
             "line": 4
         },
@@ -557,7 +557,7 @@ const CATALOG = {
             "name": "Muniție Pistol MK2",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 13
+                "Praf de Pușcă": 13
             },
             "line": 5
         },
@@ -566,7 +566,7 @@ const CATALOG = {
             "name": "Muniție Ceramic Pistol",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 13
+                "Praf de Pușcă": 13
             },
             "line": 6
         },
@@ -575,7 +575,7 @@ const CATALOG = {
             "name": "Muniție Pistol XM3",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 13
+                "Praf de Pușcă": 13
             },
             "line": 7
         },
@@ -584,7 +584,7 @@ const CATALOG = {
             "name": "Muniție TEC-9",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 15
+                "Praf de Pușcă": 15
             },
             "line": 8
         },
@@ -593,7 +593,7 @@ const CATALOG = {
             "name": "Muniție Micro SMG",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 15
+                "Praf de Pușcă": 15
             },
             "line": 9
         },
@@ -602,7 +602,7 @@ const CATALOG = {
             "name": "Muniție Mini SMG",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 15
+                "Praf de Pușcă": 15
             },
             "line": 10
         },
@@ -611,7 +611,7 @@ const CATALOG = {
             "name": "Muniție TEC-Pistol",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 18
+                "Praf de Pușcă": 18
             },
             "line": 11
         },
@@ -620,7 +620,7 @@ const CATALOG = {
             "name": "Muniție SMG",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 18
+                "Praf de Pușcă": 18
             },
             "line": 12
         },
@@ -629,7 +629,7 @@ const CATALOG = {
             "name": "Muniție Combat PDW",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 18
+                "Praf de Pușcă": 18
             },
             "line": 13
         },
@@ -638,7 +638,7 @@ const CATALOG = {
             "name": "Muniție Assault Rifle",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 25
+                "Praf de Pușcă": 25
             },
             "line": 14
         },
@@ -647,7 +647,7 @@ const CATALOG = {
             "name": "Muniție Compact Rifle",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 25
+                "Praf de Pușcă": 25
             },
             "line": 15
         },
@@ -656,7 +656,7 @@ const CATALOG = {
             "name": "Muniție Carabine Rifle",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 30
+                "Praf de Pușcă": 30
             },
             "line": 16
         },
@@ -665,7 +665,7 @@ const CATALOG = {
             "name": "Muniție Advanced Rifle",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 30
+                "Praf de Pușcă": 30
             },
             "line": 17
         },
@@ -674,7 +674,7 @@ const CATALOG = {
             "name": "Muniție Vintage Pistol",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 15
+                "Praf de Pușcă": 15
             },
             "line": 18
         },
@@ -683,7 +683,7 @@ const CATALOG = {
             "name": "Muniție Double Action Revolver",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 50
+                "Praf de Pușcă": 50
             },
             "line": 19
         },
@@ -692,7 +692,7 @@ const CATALOG = {
             "name": "Muniție Navy Revolver",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 50
+                "Praf de Pușcă": 50
             },
             "line": 20
         },
@@ -701,7 +701,7 @@ const CATALOG = {
             "name": "Muniție Assault Rifle MK2",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 30
+                "Praf de Pușcă": 30
             },
             "line": 21
         },
@@ -710,7 +710,7 @@ const CATALOG = {
             "name": "Muniție Heavy Rifle",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 30
+                "Praf de Pușcă": 30
             },
             "line": 22
         },
@@ -719,7 +719,7 @@ const CATALOG = {
             "name": "Muniție Combat MG MK2",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 30
+                "Praf de Pușcă": 30
             },
             "line": 23
         },
@@ -728,7 +728,7 @@ const CATALOG = {
             "name": "Muniție MG",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 30
+                "Praf de Pușcă": 30
             },
             "line": 24
         },
@@ -737,7 +737,7 @@ const CATALOG = {
             "name": "Muniție Gusenberg",
             "batch": 10,
             "materials": {
-                "Praf de Pusca": 18
+                "Praf de Pușcă": 18
             },
             "line": 25
         }
@@ -748,8 +748,8 @@ const CATALOG = {
             "name": "Amortizor Pistol",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2
             },
             "line": 2,
@@ -761,8 +761,8 @@ const CATALOG = {
             "name": "Amortizor Combat Pistol",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2
             },
             "line": 3,
@@ -774,8 +774,8 @@ const CATALOG = {
             "name": "Amortizor Pistol MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2
             },
             "line": 4,
@@ -787,8 +787,8 @@ const CATALOG = {
             "name": "Amortizor CERAMIC PISTOL",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2
             },
             "line": 5,
@@ -800,8 +800,8 @@ const CATALOG = {
             "name": "Amortizor Pistol XM3",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2
             },
             "line": 6,
@@ -813,8 +813,8 @@ const CATALOG = {
             "name": "Amortizor MICRO SMG",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 7,
@@ -826,8 +826,8 @@ const CATALOG = {
             "name": "Amortizor TEC-9",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2
             },
             "line": 8,
@@ -839,8 +839,8 @@ const CATALOG = {
             "name": "Amortizor Muzzle Brake Tec Pistol",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 9,
@@ -852,8 +852,8 @@ const CATALOG = {
             "name": "Amortizor SMG",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 10,
@@ -865,8 +865,8 @@ const CATALOG = {
             "name": "Amortizor Assault Rifle",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 11,
@@ -878,8 +878,8 @@ const CATALOG = {
             "name": "Amortizor Carbine Rifle",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 12,
@@ -891,8 +891,8 @@ const CATALOG = {
             "name": "Amortizor Advanced Rifle",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 13,
@@ -904,8 +904,8 @@ const CATALOG = {
             "name": "Amortizor Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 14,
@@ -917,8 +917,8 @@ const CATALOG = {
             "name": "Heavy Duty Muzzle Brake Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 15,
@@ -930,8 +930,8 @@ const CATALOG = {
             "name": "Flat Muzzle Brake Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 16,
@@ -943,8 +943,8 @@ const CATALOG = {
             "name": "Slanded Muzzle Brake Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 17,
@@ -956,8 +956,8 @@ const CATALOG = {
             "name": "Tactical Muzzle Brake Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 18,
@@ -969,8 +969,8 @@ const CATALOG = {
             "name": "Precision Muzzle Brake Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 19,
@@ -982,8 +982,8 @@ const CATALOG = {
             "name": "Split End Muzzle Brake Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 20,
@@ -995,8 +995,8 @@ const CATALOG = {
             "name": "Fat End Muzzle Brake Assault Rifle MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 21,
@@ -1008,8 +1008,8 @@ const CATALOG = {
             "name": "Amortizor Heavy Rifle",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 5,
+                "Oțel": 3,
+                "Șuruburi": 5,
                 "Polimer": 3
             },
             "line": 22,
@@ -1021,8 +1021,8 @@ const CATALOG = {
             "name": "Heavy Duty Muzzle Brake Combat MG MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 23,
@@ -1034,8 +1034,8 @@ const CATALOG = {
             "name": "Flat Muzzle Brake Combat MG MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 24,
@@ -1047,8 +1047,8 @@ const CATALOG = {
             "name": "Slanded Muzzle Brake Combat MG MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 25,
@@ -1060,8 +1060,8 @@ const CATALOG = {
             "name": "Tactical Muzzle Brake Combat MG MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 26,
@@ -1073,8 +1073,8 @@ const CATALOG = {
             "name": "Precision Muzzle Brake Combat MG MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 27,
@@ -1086,8 +1086,8 @@ const CATALOG = {
             "name": "Split End Muzzle Brake Combat MG MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 28,
@@ -1099,8 +1099,8 @@ const CATALOG = {
             "name": "Fat End Muzzle Brake Combat MG MK2",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 4,
+                "Oțel": 1,
+                "Șuruburi": 4,
                 "Polimer": 1
             },
             "line": 29,
@@ -1112,8 +1112,8 @@ const CATALOG = {
             "name": "Amortizor Vintage Pistol",
             "group": "Tip amortizor",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2
             },
             "line": 30,
@@ -1125,8 +1125,8 @@ const CATALOG = {
             "name": "Incarcator Pistol",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1139,8 +1139,8 @@ const CATALOG = {
             "name": "Incarcator Combat Pistol",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1153,8 +1153,8 @@ const CATALOG = {
             "name": "Incarcator Pistol MK2",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1167,8 +1167,8 @@ const CATALOG = {
             "name": "Incarcator CERAMIC PISTOL",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1181,8 +1181,8 @@ const CATALOG = {
             "name": "Incarcator MICRO SMG",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1195,8 +1195,8 @@ const CATALOG = {
             "name": "Incarcator TEC-9",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 8,
+                "Oțel": 2,
+                "Șuruburi": 8,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1209,8 +1209,8 @@ const CATALOG = {
             "name": "Incarcator Tec Pistol",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1223,8 +1223,8 @@ const CATALOG = {
             "name": "Incarcator SMG",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1237,8 +1237,8 @@ const CATALOG = {
             "name": "Baterie de Gloante SMG",
             "group": "Încărcător",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 20,
+                "Oțel": 3,
+                "Șuruburi": 20,
                 "Polimer": 3,
                 "Arc Metalic": 1
             },
@@ -1251,8 +1251,8 @@ const CATALOG = {
             "name": "Incarcator Assault Rifle",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1265,8 +1265,8 @@ const CATALOG = {
             "name": "Baterie de Gloante Assault Rifle",
             "group": "Încărcător",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 20,
+                "Oțel": 3,
+                "Șuruburi": 20,
                 "Polimer": 3,
                 "Arc Metalic": 1
             },
@@ -1279,8 +1279,8 @@ const CATALOG = {
             "name": "Incarcator Compact Rifle",
             "group": "Încărcător",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 30,
+                "Oțel": 3,
+                "Șuruburi": 30,
                 "Polimer": 3,
                 "Arc Metalic": 1
             },
@@ -1293,8 +1293,8 @@ const CATALOG = {
             "name": "Baterie de Gloante Compact Rifle",
             "group": "Încărcător",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 20,
+                "Oțel": 3,
+                "Șuruburi": 20,
                 "Polimer": 3,
                 "Arc Metalic": 1
             },
@@ -1307,8 +1307,8 @@ const CATALOG = {
             "name": "Baterie de Gloante Carabine Rifle",
             "group": "Încărcător",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 20,
+                "Oțel": 3,
+                "Șuruburi": 20,
                 "Polimer": 3,
                 "Arc Metalic": 1
             },
@@ -1321,8 +1321,8 @@ const CATALOG = {
             "name": "Incarcator Advanced Rifle",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1335,8 +1335,8 @@ const CATALOG = {
             "name": "Incarcator Assault Rifle MK2",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 5,
+                "Oțel": 2,
+                "Șuruburi": 5,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1349,8 +1349,8 @@ const CATALOG = {
             "name": "Incarcator Heavy Rifle",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1363,8 +1363,8 @@ const CATALOG = {
             "name": "Incarcator Combat MG MK2",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1377,8 +1377,8 @@ const CATALOG = {
             "name": "Incarcator Vintage Pistol",
             "group": "Încărcător",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Arc Metalic": 1
             },
@@ -1391,8 +1391,8 @@ const CATALOG = {
             "name": "Lanterna Pistol",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
                 "Lupa": 1
@@ -1406,8 +1406,8 @@ const CATALOG = {
             "name": "Lanterna Combat pistol",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
                 "Lupa": 1
@@ -1421,8 +1421,8 @@ const CATALOG = {
             "name": "Lanterna Pistol MK2",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
                 "Lupa": 1
@@ -1436,8 +1436,8 @@ const CATALOG = {
             "name": "Lanterna MICRO SMG",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
                 "Lupa": 1
@@ -1451,8 +1451,8 @@ const CATALOG = {
             "name": "Lanterna SMG",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
                 "Lupa": 1
@@ -1466,8 +1466,8 @@ const CATALOG = {
             "name": "Lanterna Assault Rifle",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
                 "Lupa": 1
@@ -1481,8 +1481,8 @@ const CATALOG = {
             "name": "Lanterna Advanced Rifle",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1,
                 "Lupa": 1
@@ -1496,8 +1496,8 @@ const CATALOG = {
             "name": "Lanterna Assault Rifle MK2",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Bec": 1
             },
@@ -1510,8 +1510,8 @@ const CATALOG = {
             "name": "Lanterna Heavy Rifle",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Lupa": 1,
                 "Bec": 1
@@ -1525,8 +1525,8 @@ const CATALOG = {
             "name": "Mounted Scope Pistol MK2",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1539,8 +1539,8 @@ const CATALOG = {
             "name": "Luneta MICRO SMG",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1553,8 +1553,8 @@ const CATALOG = {
             "name": "Luneta Tec Pistol",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1567,8 +1567,8 @@ const CATALOG = {
             "name": "Luneta SMG",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1581,8 +1581,8 @@ const CATALOG = {
             "name": "Luneta Assault Rifle",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1595,8 +1595,8 @@ const CATALOG = {
             "name": "Luneta Mica Assault Rifle MK2",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1609,8 +1609,8 @@ const CATALOG = {
             "name": "Luneta Mare Assault Rifle MK2",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 12,
+                "Oțel": 2,
+                "Șuruburi": 12,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1623,8 +1623,8 @@ const CATALOG = {
             "name": "Vizor Holografic Assault Rifle MK2",
             "group": "Lunetă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 8,
+                "Oțel": 1,
+                "Șuruburi": 8,
                 "Polimer": 1,
                 "Lupa": 1
             },
@@ -1637,8 +1637,8 @@ const CATALOG = {
             "name": "Luneta Heavy Rifle",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1651,8 +1651,8 @@ const CATALOG = {
             "name": "Luneta Medie Combat MG MK2",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1665,8 +1665,8 @@ const CATALOG = {
             "name": "Luneta Mare Combat MG MK2",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 12,
+                "Oțel": 2,
+                "Șuruburi": 12,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1679,8 +1679,8 @@ const CATALOG = {
             "name": "Vizor Holografic Combat MG MK2",
             "group": "Lunetă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 8,
+                "Oțel": 1,
+                "Șuruburi": 8,
                 "Polimer": 1,
                 "Lupa": 1
             },
@@ -1693,8 +1693,8 @@ const CATALOG = {
             "name": "Grip Assault Rifle",
             "group": "Grip",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1
             },
             "line": 79,
@@ -1706,8 +1706,8 @@ const CATALOG = {
             "name": "Grip Assault Rifle MK2",
             "group": "Grip",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1
             },
             "line": 80,
@@ -1719,8 +1719,8 @@ const CATALOG = {
             "name": "Grip Heavy Rifle",
             "group": "Grip",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1
             },
             "line": 81,
@@ -1732,8 +1732,8 @@ const CATALOG = {
             "name": "Grip Combat MG MK2",
             "group": "Grip",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1
             },
             "line": 82,
@@ -1745,8 +1745,8 @@ const CATALOG = {
             "name": "Teava Assault Rifle MK2",
             "group": "Țeavă",
             "materials": {
-                "Otel": 4,
-                "Suruburi": 16,
+                "Oțel": 4,
+                "Șuruburi": 16,
                 "Polimer": 4
             },
             "line": 85,
@@ -1758,8 +1758,8 @@ const CATALOG = {
             "name": "Teava Combat MG MK2",
             "group": "Țeavă",
             "materials": {
-                "Otel": 4,
-                "Suruburi": 16,
+                "Oțel": 4,
+                "Șuruburi": 16,
                 "Polimer": 4
             },
             "line": 86,
@@ -1771,8 +1771,8 @@ const CATALOG = {
             "name": "Incarcator Mini SMG",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1786,8 +1786,8 @@ const CATALOG = {
             "name": "Incarcator Combat PDW",
             "group": "Încărcător",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Arc Metalic": 1
             },
@@ -1801,8 +1801,8 @@ const CATALOG = {
             "name": "Baterie de Gloante Combat PDW",
             "group": "Încărcător",
             "materials": {
-                "Otel": 3,
-                "Suruburi": 20,
+                "Oțel": 3,
+                "Șuruburi": 20,
                 "Polimer": 3,
                 "Arc Metalic": 1
             },
@@ -1816,8 +1816,8 @@ const CATALOG = {
             "name": "Luneta Combat PDW",
             "group": "Lunetă",
             "materials": {
-                "Otel": 2,
-                "Suruburi": 10,
+                "Oțel": 2,
+                "Șuruburi": 10,
                 "Polimer": 2,
                 "Lupa": 1
             },
@@ -1831,8 +1831,8 @@ const CATALOG = {
             "name": "Grip Combat PDW",
             "group": "Grip",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1
             },
             "line": 5,
@@ -1845,8 +1845,8 @@ const CATALOG = {
             "name": "Lanterna Combat PDW",
             "group": "Lanternă",
             "materials": {
-                "Otel": 1,
-                "Suruburi": 5,
+                "Oțel": 1,
+                "Șuruburi": 5,
                 "Polimer": 1,
                 "Lupa": 1,
                 "Bec": 1
@@ -1862,7 +1862,7 @@ const CATALOG = {
         "Gloante.txt:10 — „Mini-SMG” asociat cu „Mini SMG”.",
         "Gloante.txt:11 — „Tec Pistol” asociat cu „TEC-Pistol”.",
         "Gloante.txt:17 — „Advance Rifle” asociat cu „Advanced Rifle”.",
-        "Atasamente.txt:75 — „12 Suruburi” interpretat ca „12x Suruburi”.",
+        "Atasamente.txt:75 — „12 Șuruburi” interpretat ca „12x Șuruburi”.",
         "Atasamente.txt:81 — al doilea „=” din „Grip Heavy Rifle” interpretat ca „+”.",
         "Atasamente.txt:82 — al doilea „=” din „Grip Combat MG MK2” interpretat ca „+”.",
         "MG: niciun atașament definit în Atasamente.txt (nu au fost inventate).",
@@ -1870,7 +1870,7 @@ const CATALOG = {
         "Double Action Revolver: niciun atașament definit în Atasamente.txt (nu au fost inventate).",
         "Navy Revolver: niciun atașament definit în Atasamente.txt (nu au fost inventate).",
         "Lanterna Assault Rifle MK2 — corectată la cererea ta: necesită 1 Bec; Lupa rămâne conform fișierului original (nedefinită).",
-        "Materiale Arme.txt — valorile „Total ... Otel” din paranteze diferă de Otel din rețete. Calculul folosește materialele enumerate înaintea parantezelor; notele originale sunt afișate separat, fără conversii presupuse.",
+        "Materiale Arme.txt — valorile „Total ... Oțel” din paranteze diferă de Oțel din rețete. Calculul folosește materialele enumerate înaintea parantezelor; nOțele originale sunt afișate separat, fără conversii presupuse.",
         "Atasamente Lipsa (1).txt — 6 variante importate: 1 pentru Mini SMG și 5 pentru Combat PDW."
     ]
 };

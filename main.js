@@ -1,13 +1,13 @@
 const MATERIAL_ICONS = {
     "Arc Metalic": "assets/materials/arc-metalic.webp",
     "Bec": "assets/materials/bec.webp",
-    "Lupa": "assets/materials/lupa.webp",
-    "Otel": "assets/materials/otel.webp",
+    "Lupă": "assets/materials/lupa.webp",
+    "Oțel": "assets/materials/otel.webp",
     "Polimer": "assets/materials/polimer.webp",
-    "Praf de Pusca": "assets/materials/praf-de-pusca.webp",
-    "Suruburi": "assets/materials/suruburi.webp",
-    "Teava Metalica": "assets/materials/teava-metalica.webp",
-    "Bucata de Lemn": "assets/materials/BucataDeLemn.webp"
+    "Praf de Pușcă": "assets/materials/praf-de-pusca.webp",
+    "Șuruburi": "assets/materials/suruburi.webp",
+    "Țeavă Metalică": "assets/materials/teava-metalica.webp",
+    "Bucată de Lemn": "assets/materials/BucataDeLemn.webp"
 };
 const {weapons, ammo, attachments, issues} = CATALOG;
 const $ = s => document.querySelector(s), fmt = n => n.toLocaleString('ro-RO'),
@@ -103,7 +103,7 @@ function renderCards() {
     $('#count').textContent = list.length;
     $('#cards').innerHTML = list.map(w => {
         const d = draft(w), a = ammoFor(w), added = cart.some(i => i.weapon === w.id);
-        return `<article class="card" data-weapon="${w.id}"><div class="art"><span class="serial">VA / ${String(weapons.indexOf(w) + 1).padStart(2, '0')}</span><span class="type">${w.category === 'RIFLE/LMG' ? (['mg', 'combatmgmk2'].includes(w.id) ? 'LMG' : 'RIFLE') : w.category.toUpperCase()}</span><img class="weapon-image" src="${esc(w.image)}" alt="${esc(w.name)}" width="560" height="378" loading="lazy" decoding="async"></div><div class="card-body"><div class="weapon-heading"><h3>${esc(w.name)}</h3><span class="price-badge">${w.price ? paymentPrices(w.price) : 'CRAFT'}</span></div><p class="subtitle">${groupsFor(w).length} tipuri · ${w.attachments.length} variante de atașamente</p><details class="recipe-details"><summary>Materialele necesare ${w.price ? '& costul' : ''}</summary><p>${recipe(w.materials)}</p>${w.price ? `<p>Preț unitar: ${paymentPrices(w.price)}</p><p>Banii murdari includ un adaos de 15%. Sumele sunt alternative de plată.</p>` : ''}</details><div class="field-title"><span>ATAȘAMENTE COMPATIBILE</span></div><div class="attachment-list" tabindex="0" role="region" aria-label="Atașamente pentru ${esc(w.name)}">${groupsFor(w).map((g, i) => attachmentControl(w, g, d, i)).join('') || '<p class="missing-attachments">Niciun atașament disponibil pentru această armă.</p>'}</div><div class="quantity-row"><span>◇ &nbsp; Număr arme</span>${step('q-' + w.id, d.qty, 1, 1, 'Număr arme')}</div><div class="quantity-row"><span>▰ &nbsp; Gloanțe</span>${step('b-' + w.id, d.bullets, 0, 10, 'Număr gloanțe')}</div><p class="ammo-note">${a.batch} gloanțe = ${recipe(a.materials)}<br><span data-ammo-note>${ammoNote(d)}</span></p><p class="quantity-help">Cantitățile atașamentelor și gloanțelor sunt totale pentru această poziție.</p><button class="primary" data-add="${w.id}">${added ? '✓ În coș · actualizare automată' : '＋ Adaugă în configurație'}</button></div></article>`
+        return `<article class="card" data-weapon="${w.id}"><div class="art"><span class="serial">VA / ${String(weapons.indexOf(w) + 1).padStart(2, '0')}</span><span class="type">${w.category === 'RIFLE/LMG' ? (['mg', 'combatmgmk2'].includes(w.id) ? 'LMG' : 'RIFLE') : w.category.toUpperCase()}</span><img class="weapon-image" src="${esc(w.image)}" alt="${esc(w.name)}" width="560" height="378" loading="lazy" decoding="async"></div><div class="card-body"><div class="weapon-heading"><h3>${esc(w.name)}</h3><span class="price-badge">${w.price ? paymentPrices(w.price) : 'CRAFT'}</span></div><p class="subtitle">${groupsFor(w).length} tipuri · ${w.attachments.length} variante de atașamente</p><details class="recipe-details"><summary>Materialele necesare ${w.price ? '& costul' : ''}</summary><p>${recipe(w.materials)}</p>${w.price ? `<p>Preț unitar: ${paymentPrices(w.price)}</p><p>Banii murdari includ un adaos de 15%. Sumele sunt alternative de plată.</p>` : ''}</details><div class="field-title"><span>ATAȘAMENTE COMPATIBILE</span></div><div class="attachment-list" tabindex="0" role="region" aria-label="Atașamente pentru ${esc(w.name)}">${groupsFor(w).map((g, i) => attachmentControl(w, g, d, i)).join('') || '<p class="missing-attachments">Niciun atașament disponibil pentru această armă.</p>'}</div><div class="quantity-row"><span>◇ &nbsp; Număr arme</span>${step('q-' + w.id, d.qty, 1, 1, 'Număr arme')}</div><div class="quantity-row"><span>▰ &nbsp; Gloanțe</span>${step('b-' + w.id, d.bullets, 0, 10, 'Număr gloanțe')}</div><p class="ammo-note">${a.batch} gloanțe = ${recipe(a.materials)}<br><span data-ammo-note>${ammoNote(d)}</span></p><p class="quantity-help">Cantitățile atașamentelor și gloanțelor sunt totale pentru această poziție.</p><button class="primary" data-add="${w.id}">${added ? '✓ Adăugat în calculator · actualizare automată' : '＋ Adaugă în calculator'}</button></div></article>`
     }).join('') || '<div class="no-results">Nicio armă găsită. Încearcă alt nume.</div>'
 }
 
@@ -134,7 +134,7 @@ function renderCart() {
     }).join('') : '<div class="empty"><div class="empty-icon">▱</div><b>Configurația începe aici</b><p>Adaugă o armă din arsenal.<br>Modificările ulterioare se actualizează automat.</p></div>';
     const t = totals();
     $('#materials').innerHTML = Object.entries(t.materials).map(([k, v]) => `<div class="total-row"><span class="material-label">${MATERIAL_ICONS[k] ? `<img class="material-icon" src="${MATERIAL_ICONS[k]}" alt="" width="38" height="38">` : `<span class="material-fallback" aria-hidden="true">◇</span>`}<span>${esc(k)}</span></span><b>${fmt(v)}</b></div>`).join('') || '<div class="total-row"><span>Niciun material necesar</span><b>—</b></div>';
-    $('#materials').innerHTML += `<div class="money-options"><p>Alternative de plată</p><div class="money-total"><span>Total $ curați</span><b>${fmt(t.money)}</b></div><div class="money-total dirty-total"><span>Total $ murdari <small>+15%</small></span><b>${fmt(dirtyPrice(t.money))}</b></div></div><p class="quantity-help">Prețurile armelor se adună separat. Muniția se produce în loturi de 10, rotunjite în sus.</p>`;
+    $('#materials').innerHTML += `<div class="money-options"><p>Alternative de plată pentru armă (nu intră și atașamentele).</p><div class="money-total"><span>Total $ curați</span><b>${fmt(t.money)}</b></div><div class="money-total dirty-total"><span>Total $ murdari <small>+15%</small></span><b>${fmt(dirtyPrice(t.money))}</b></div></div><p class="quantity-help">Prețurile armelor se adună separat. Muniția se produce în loturi de 10, rotunjite în sus.</p>`;
     $('#clear').disabled = !cart.length
 }
 
@@ -203,7 +203,7 @@ $('#cards').onclick = e => {
         const index = cart.findIndex(i => i.weapon === item.weapon);
         if (index >= 0) cart[index] = structuredClone(item); else cart.push(structuredClone(item));
         persist();
-        toast(index >= 0 ? 'Configurație actualizată' : 'Configurație adăugată în coș')
+        toast(index >= 0 ? 'Configurație actualizată' : 'Configure adăugată în coș')
     }
 };
 $('#cards').oninput = e => {
