@@ -3,8 +3,10 @@ import {emptyDraft, loadCart, STORAGE, validItem, weapons} from './model.js';
 import WeaponCard from './components/WeaponCard.jsx';
 import Cart from './components/Cart.jsx';
 import WashingCalculator from './components/WashingCalculator.jsx';
+import Intro from './components/Intro.jsx';
 
 export default function App() {
+    const [intro, setIntro] = useState(true);
     const [view, setView] = useState('armory');
     const [cart, setCart] = useState(() => {
         try { return loadCart(localStorage); } catch { return []; }
@@ -46,6 +48,8 @@ export default function App() {
         notify(exists ? 'Configurație actualizată' : 'Configurație adăugată în coș');
     }
     const list = weapons.filter(w => (arsenal === 'neo' ? w.price > 0 : w.price === 0) && (category === 'Toate' || w.category === category) && w.name.toLowerCase().includes(search.toLowerCase()));
+
+    if (intro) return <Intro onFinish={() => setIntro(false)} />;
 
     return <>
         <header><a className="brand" href="/" onClick={e => {e.preventDefault(); navigate('armory');}}><img src="assets/logo.png" alt="Logo Vidrarios" /><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>

@@ -1,7 +1,29 @@
 import {test, expect} from '@playwright/test';
 
+test('intro loads the video and enters the app when playback ends', async ({page}) => {
+    await page.goto('/');
+    const video = page.locator('.intro-screen video');
+    await expect(video).toBeVisible();
+    await expect.poll(() => video.evaluate(element => element.readyState)).toBeGreaterThanOrEqual(2);
+    expect(await video.evaluate(element => element.muted)).toBe(false);
+    await expect(page.getByRole('button', {name: 'Oprește sunetul'})).toBeVisible();
+    await expect.poll(async () => (await video.evaluate(element => !element.paused)) || await page.getByRole('button', {name: 'Pornește videoclipul'}).isVisible()).toBe(true);
+    if (await page.getByRole('button', {name: 'Pornește videoclipul'}).isVisible()) {
+        await page.getByRole('button', {name: 'Pornește videoclipul'}).click();
+    }
+    await expect.poll(() => video.evaluate(element => element.currentTime)).toBeGreaterThan(0);
+    expect(await video.evaluate(element => element.muted)).toBe(false);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.screenshot({path: test.info().outputPath('intro.png')});
+    await video.evaluate(element => {element.currentTime = element.duration - 0.2;});
+    await expect(page.locator('.intro-screen')).toHaveCount(0);
+    await expect(page.locator('.card')).toHaveCount(15);
+    await expect(page).toHaveURL('http://127.0.0.1:4173/');
+});
+
 test('calculator sections keep the same width and alignment when switching', async ({page}) => {
     await page.goto('/');
+    await page.getByRole('button', {name: 'Sari peste intro'}).click();
     const bounds = selector => page.locator(selector).evaluate(element => {
         const {x, width} = element.getBoundingClientRect();
         return {x, width};
@@ -23,6 +45,7 @@ test('catalog, configuration, persistence and both calculators work together', a
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     await page.goto('/index.html');
+    await page.getByRole('button', {name: 'Sari peste intro'}).click();
     await expect(page).toHaveURL('http://127.0.0.1:4173/');
     await expect(page.locator('.card')).toHaveCount(15);
     const card = page.locator('[data-weapon="pistol"]');
@@ -35,6 +58,7 @@ test('catalog, configuration, persistence and both calculators work together', a
     await card.getByRole('button', {name: 'Crește Număr arme', exact: true}).click();
     await expect(page.locator('.cart-item')).toContainText('3 × armă');
     await page.reload();
+    await page.getByRole('button', {name: 'Sari peste intro'}).click();
     await expect(page.locator('.cart-item')).toContainText('3 × armă');
     await expect(card.getByRole('spinbutton', {name: 'Număr arme', exact: true})).toHaveValue('3');
     await page.getByRole('button', {name: 'Neo & Oficiale'}).click();

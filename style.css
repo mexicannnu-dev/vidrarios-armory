@@ -1273,3 +1273,16 @@ header nav button { padding: 0; text-align: left; line-height: 1.5; }
 @media (max-width: 680px) {
     header nav button { font-size: 10px; max-width: none; }
 }
+
+/* Video welcome screen */
+.intro-screen { min-height: 100dvh; width: 100%; max-width: none; padding: 36px max(5%, 20px); display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(ellipse at 50% 45%, #ff7a1a15, transparent 65%), #101011; }
+.intro-brand { display: flex; align-items: center; gap: 14px; font: 700 clamp(28px, 4vw, 42px) 'Barlow Condensed', sans-serif; }
+.intro-brand img { width: 64px; height: 64px; object-fit: contain; }
+.intro-brand b { color: var(--orange); }
+.intro-caption { color: #999; font-size: 11px; letter-spacing: 1px; text-align: center; line-height: 1.8; }
+.intro-video-frame { width: 100%; max-width: 1040px; margin-top: 24px; border: 1px solid #8c471c; border-radius: 10px; overflow: hidden; background: #000; box-shadow: 0 0 60px #ff7a1a12; }
+.intro-video-frame video { display: block; width: 100%; max-height: 65dvh; object-fit: contain; }
+.intro-actions { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; width: 100%; max-width: 1040px; margin: 20px 0 6px; }
+.intro-actions button, .intro-play { border: 1px solid #70401d; border-radius: 5px; padding: 12px 18px; background: #21170f; color: #ff963f; font-weight: 600; }
+.intro-actions .intro-skip, .intro-play { background: var(--orange); color: #17120f; border-color: var(--orange); }
+.intro-actions button:hover, .intro-play:hover { filter: brightness(1.15); }
