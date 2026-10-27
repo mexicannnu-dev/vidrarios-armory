@@ -15,7 +15,7 @@ export const recipe = materials => Object.entries(materials).filter(([, n]) => n
 
 export function validItem(item) {
     const w = weaponById(item?.weapon);
-    return Boolean(w && validQty(item.qty, 1) && validQty(item.bullets) &&
+    return Boolean(w && validQty(item.qty) && validQty(item.bullets) &&
         Array.isArray(item.attachments) && item.attachments.every(a => a && w.attachments.includes(a.id) && attachmentById(a.id) && validQty(a.qty, 1)) &&
         new Set(item.attachments.map(a => attachmentById(a.id).group)).size === item.attachments.length);
 }

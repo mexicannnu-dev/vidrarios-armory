@@ -50,7 +50,7 @@ export default function App() {
         if (validItem(item)) setCart(previous => previous.map(saved => saved.weapon === item.weapon ? item : saved));
     }
     function add(item) {
-        if (!validItem(item)) { notify('Introdu cantități valide între 0 și 999999 (minimum 1 pentru arme și atașamente).'); return; }
+        if (!validItem(item)) { notify('Introdu cantități valide între 0 și 999999 (minimum 1 pentru atașamente).'); return; }
         const exists = cart.some(saved => saved.weapon === item.weapon);
         setCart(previous => exists ? previous.map(saved => saved.weapon === item.weapon ? item : saved) : [...previous, item]);
     }

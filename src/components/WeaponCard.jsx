@@ -48,7 +48,7 @@ export default function WeaponCard({weapon: w, draft, added, onChange, onAdd, on
                 })}
                 {!groups.length && <p className="missing-attachments">Niciun atașament disponibil pentru această armă.</p>}
             </div>
-            <div className="quantity-row"><span>◇ &nbsp; Număr arme</span><Stepper value={draft.qty} min={1} label="Număr arme" onChange={qty => update({qty})} /></div>
+            <div className="quantity-row"><span>◇ &nbsp; Număr arme</span><Stepper value={draft.qty} label="Număr arme" onChange={qty => update({qty})} /></div>
             <div className="quantity-row"><span>▰ &nbsp; Gloanțe</span><Stepper value={draft.bullets} increment={10} label="Număr gloanțe" onChange={bullets => update({bullets})} /></div>
             <p className="ammo-note">{a.batch} gloanțe = <MaterialRecipe materials={a.materials} /><br /><span>{validQty(draft.bullets) ? ammoNote(draft) : 'Introdu un număr valid de gloanțe.'}</span></p>
             <p className="quantity-help">Cantitățile atașamentelor și gloanțelor sunt totale pentru această poziție.</p>
