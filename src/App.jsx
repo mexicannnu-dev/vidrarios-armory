@@ -4,6 +4,7 @@ import WeaponCard from './components/WeaponCard.jsx';
 import Cart from './components/Cart.jsx';
 import WashingCalculator from './components/WashingCalculator.jsx';
 import Intro from './components/Intro.jsx';
+import HuntingPage from './components/HuntingPage.jsx';
 
 export default function App() {
     const [intro, setIntro] = useState(() => {
@@ -33,7 +34,7 @@ export default function App() {
         catch { /* The app remains usable when browser storage is unavailable. */ }
     }, []);
     useEffect(() => {
-        document.title = view === 'washing' ? 'Calculator spălare bani | Vidrarios Armory' : 'Vidrarios Armory';
+        document.title = view === 'hunting' ? 'Vânător | Vidrarios Armory' : view === 'washing' ? 'Calculator spălare bani | Vidrarios Armory' : 'Vidrarios Armory';
     }, [view]);
 
     function notify(message) {
@@ -61,7 +62,7 @@ export default function App() {
     return <div className={`app-shell design-technical ${enteredFromIntro ? 'app-reveal' : ''}`}>
         {enteredFromIntro && <div className="armory-transition" aria-hidden="true"><span /></div>}
         <header><a className="brand" href="/" onClick={e => {e.preventDefault(); navigate('armory');}}><img src="assets/logo.png" alt="Logo Vidrarios" /><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>
-            <nav aria-label="Navigare principală">{[{id: 'armory', label: 'CALCULATOR MATERIALE ARME'}, {id: 'washing', label: 'CALCULATOR SPĂLARE BANI'}].map(({id, label}) => <button key={id} type="button" className={view === id ? 'active' : ''} aria-controls={`${id}-view`} aria-pressed={view === id} onClick={() => navigate(id)}><b>{label}</b></button>)}</nav>
+            <nav aria-label="Navigare principală">{[{id: 'armory', label: 'CALCULATOR MATERIALE ARME'}, {id: 'washing', label: 'CALCULATOR SPĂLARE BANI'}, {id: 'hunting', label: 'VÂNĂTOR'}].map(({id, label}) => <button key={id} type="button" className={view === id ? 'active' : ''} aria-controls={`${id}-view`} aria-pressed={view === id} onClick={() => navigate(id)}><b>{label}</b></button>)}</nav>
         </header>
         <main>
             <div id="armory-view" data-page-view="armory" hidden={view !== 'armory'}>
@@ -75,6 +76,7 @@ export default function App() {
                 </section><Cart cart={cart} onRemove={id => setCart(previous => previous.filter(item => item.weapon !== id))} onClear={() => {setCart([]); notify('Coșul a fost golit');}} /></div>
             </div>
             <div id="washing-view" data-page-view="washing" hidden={view !== 'washing'}><WashingCalculator /></div>
+            <div id="hunting-view" data-page-view="hunting" hidden={view !== 'hunting'}><HuntingPage /></div>
         </main>
         <footer><b>VIDRARIOS ARMORY</b><span>Planifică. Configurează. Fii pregătit.</span><span>© 2026 Vidrarios Armory · Made by MeXicaNu</span></footer>
         <div id="toast" className={toast || storageError ? 'show' : ''} role="status">{toast || (storageError ? 'Salvarea locală nu este disponibilă.' : '')}</div>
