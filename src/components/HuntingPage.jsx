@@ -10,8 +10,8 @@ export default function HuntingPage() {
 
     return <section className="hunting-page" aria-labelledby="hunter-title">
         <div className="washing-intro">
-            <p className="eyebrow page-kicker">VIDRARIOS / VÂNĂTOARE (WORK IN PROGRESS)</p>
-            <h1 id="hunter-title">VÂNĂTOR</h1>
+            <p className="eyebrow page-kicker">VIDRARIOS / VÂNĂTOARE</p>
+            <h1 id="hunter-title">VÂNĂTOR (WORK IN PROGRESS)</h1>
             <p>Explorează zonele de vânătoare și calculează valoarea produselor din inventar.</p>
         </div>
         <div className="arsenal-tabs hunting-tabs" role="tablist" aria-label="Pagini vânător">
