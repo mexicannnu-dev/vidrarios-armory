@@ -5,6 +5,7 @@ import Cart from './components/Cart.jsx';
 import WashingCalculator from './components/WashingCalculator.jsx';
 import Intro from './components/Intro.jsx';
 import HuntingPage from './components/HuntingPage.jsx';
+import Signature from './components/Signature.jsx';
 
 export default function App() {
     const [intro, setIntro] = useState(() => {
@@ -61,14 +62,14 @@ export default function App() {
 
     return <div className={`app-shell design-technical ${enteredFromIntro ? 'app-reveal' : ''}`}>
         {enteredFromIntro && <div className="armory-transition" aria-hidden="true"><span /></div>}
-        <header><a className="brand" href="/" onClick={e => {e.preventDefault(); navigate('armory');}}><img src="assets/logo.png" alt="Logo Vidrarios" /><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>
+        <header><a className="brand brand-neon" href="/" onClick={e => {e.preventDefault(); navigate('armory');}}><img src="assets/logo.png" alt="Logo Vidrarios" /><span>VIDRARIOS <b>ARMORY</b><small>INVENTARUL TĂU. REGULILE TALE.</small></span></a>
             <nav aria-label="Navigare principală">{[{id: 'armory', label: 'CALCULATOR MATERIALE ARME'}, {id: 'washing', label: 'CALCULATOR SPĂLARE BANI'}, {id: 'hunting', label: 'VÂNĂTOR'}].map(({id, label}) => <button key={id} type="button" className={view === id ? 'active' : ''} aria-controls={`${id}-view`} aria-pressed={view === id} onClick={() => navigate(id)}><b>{label}</b></button>)}</nav>
         </header>
         <main>
             <div id="armory-view" data-page-view="armory" hidden={view !== 'armory'}>
                 <div className="notice"><span aria-hidden="true">◈</span><div><b>Minimum 500 de gloanțe per tip de armă pentru comandă · 5.000 $ / 500 gloanțe</b><p>Calculatorul permite în continuare calculul materialelor în loturi de câte 10 gloanțe.</p></div><span className="tag">MUNIȚIE</span></div>
                 <div className="layout"><section id="catalog">
-                    <div className="section-head catalog-heading"><h2>ARMORY <span>{list.length}</span></h2><div className="armory-approval"><span>Approved by</span><strong>Vali Furtuna</strong></div><label className="search">⌕ <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Caută o armă…" aria-label="Caută o armă" /></label></div>
+                    <div className="section-head catalog-heading"><h2>ARMORY <span>{list.length}</span></h2><Signature /><label className="search">⌕ <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Caută o armă…" aria-label="Caută o armă" /></label></div>
                     <div className="arsenal-tabs" aria-label="Tip arsenal">{[{id: 'craft', name: 'Civili'}, {id: 'neo', name: 'Neo & Oficiale'}].map(({id, name}) => <button key={id} className={arsenal === id ? 'selected' : ''} aria-pressed={arsenal === id} onClick={() => {setArsenal(id); setCategory('Toate'); setSearch('');}}>{name}<span>{weapons.filter(w => id === 'neo' ? w.price > 0 : w.price === 0).length}</span></button>)}</div>
                     <div className="filters">{['Toate', 'Pistol', 'SMG', 'RIFLE/LMG'].map(name => <button key={name} className={category === name ? 'selected' : ''} aria-pressed={category === name} onClick={() => setCategory(name)}>{name}</button>)}</div>
                     <div className="cards">{list.map(w => <WeaponCard key={w.id} weapon={w} draft={drafts[w.id] || emptyDraft(w)} added={cart.some(item => item.weapon === w.id)} onChange={changeDraft} onAdd={add} onRemove={id => setCart(previous => previous.filter(item => item.weapon !== id))} />)}{!list.length && <div className="no-results">Nicio armă găsită. Încearcă alt nume.</div>}</div>

@@ -178,15 +178,41 @@ header {
 }
 
 .brand b {
-    color: var(--orange)
+    display: block;
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1.4;
+    margin-top: 3px;
+}
+
+.brand > span {
+    position: relative;
+    display: block;
+    padding-left: 16px;
+    border-left: 1px solid #ff7a1a45;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: 2.5px;
+}
+
+.brand > span::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 2px;
+    height: 18px;
+    background: var(--orange);
 }
 
 .brand small {
     display: block;
-    font: 9px Inter;
-    letter-spacing: 2px;
-    color: #777;
-    margin-top: 6px
+    font: 500 8px/1.5 Inter, sans-serif;
+    letter-spacing: 1.4px;
+    color: #a49b92;
+    margin-top: 7px
 }
 
 nav {
@@ -803,6 +829,23 @@ dialog h3 {
 
     .brand img {
         width: 48px
+    }
+
+    .brand > span {
+        padding-left: 11px;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .brand b {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .brand small {
+        max-width: 145px;
+        font-size: 7px;
+        letter-spacing: .8px;
     }
 
     nav {
@@ -2054,11 +2097,13 @@ header nav button {
 
 .armory-approval > strong {
     display: block;
+    position: relative;
+    z-index: 1;
     color: var(--orange);
-    font: 400 42px/.7 'Mrs Saint Delafield', 'Segoe Script', cursive;
+    font: 400 42px/1.2 'Mrs Saint Delafield', 'Segoe Script', cursive;
     white-space: nowrap;
     transform: rotate(-5deg);
-    margin: 0;
+    margin: -12px 0 0;
 }
 
 @media (max-width: 680px) {
@@ -3275,3 +3320,69 @@ header nav button {
 .configure-remove:active {
     background: #8c3e2c;
 }
+
+/* Final header wordmark */
+.brand-neon > span {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 8px;
+    isolation: isolate;
+    border: 0;
+    padding: 7px 0;
+    color: #fff7ed;
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 0 #703212, 0 0 25px #ff7a1a25;
+}
+.brand-neon > span::before {
+    inset: -6px -56px;
+    z-index: -1;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, #ff791a28 0%, #ff791a16 30%, #ff791a08 52%, #ff791a00 72%);
+    pointer-events: none;
+}
+.brand-neon > span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #ff9b52, #ff7a1a30 65%, transparent);
+}
+.brand-neon b {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 6px 10px 6px 12px;
+    color: #211007;
+    background: linear-gradient(115deg, #ffb66e, #ff7a1a);
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-shadow: none;
+}
+.brand-neon small {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #b5a69a;
+    font-style: normal;
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-shadow: none;
+}
+@media (max-width: 680px) {
+    header > .brand > span { font-size: 18px; }
+    header > .brand-neon > span { font-size: 23px; column-gap: 6px; }
+    header > .brand-neon b { font-size: 10px; padding: 5px 8px; letter-spacing: 1px; }
+    header > .brand-neon small { max-width: none; font-size: 7px; letter-spacing: .7px; }
+}
+
